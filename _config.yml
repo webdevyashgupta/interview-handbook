@@ -1,0 +1,18 @@
+title: NeetCode 150 Interview Handbook
+description: A complete interview preparation guide covering all 150 NeetCode problems with intuition, optimal solutions, and interview traps.
+theme: jekyll-theme-minimal
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+include:
+  - "*.md"
