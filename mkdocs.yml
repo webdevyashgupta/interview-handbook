@@ -1,0 +1,79 @@
+site_name: NeetCode 150 — Interview Handbook
+site_description: Complete interview prep guide covering all 150 NeetCode problems with intuition, solutions, and interview traps.
+site_url: https://YOUR_USERNAME.github.io/neetcode150-handbook/
+repo_url: https://github.com/YOUR_USERNAME/neetcode150-handbook
+repo_name: neetcode150-handbook
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+    accent: deep purple
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOUR_USERNAME/neetcode150-handbook
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Topics:
+    - 1. Arrays & Hashing: 01_arrays_hashing.md
+    - 2. Two Pointers: 02_two_pointers.md
+    - 3. Sliding Window: 03_sliding_window.md
+    - 4. Stack: 04_stack.md
+    - 5. Binary Search: 05_binary_search.md
+    - 6. Linked List: 06_linked_list.md
+    - 7. Trees: 07_trees.md
+    - 8. Tries: 08_tries.md
+    - 9. Heap / Priority Queue: 09_heap.md
+    - 10. Backtracking: 10_backtracking.md
+    - 11. Graphs: 11_graphs.md
+    - 12. Advanced Graphs: 12_advanced_graphs.md
+    - 13. 1-D Dynamic Programming: 13_dp_1d.md
+    - 14. 2-D Dynamic Programming: 14_dp_2d.md
+    - 15. Greedy: 15_greedy.md
+    - 16. Intervals: 16_intervals.md
+    - 17. Math & Geometry: 17_math_geometry.md
+    - 18. Bit Manipulation: 18_bit_manipulation.md
