@@ -1,8 +1,8 @@
-site_name: NeetCode 150 — Interview Handbook
-site_description: Complete interview prep guide covering all 150 NeetCode problems with intuition, solutions, and interview traps.
-site_url: https://YOUR_USERNAME.github.io/neetcode150-handbook/
-repo_url: https://github.com/YOUR_USERNAME/neetcode150-handbook
-repo_name: neetcode150-handbook
+site_name: NeetCode 150 + Grind 169 — Complete Interview Handbook
+site_description: ~197 unique problems covering NeetCode 150, Grind 169, Grind 75, and Blind 75. Every problem has intuition, optimal solution, and interview traps.
+site_url: https://YOUR_USERNAME.github.io/interview-handbook/
+repo_url: https://github.com/YOUR_USERNAME/interview-handbook
+repo_name: interview-handbook
 edit_uri: edit/main/docs/
 
 docs_dir: docs
@@ -18,12 +18,14 @@ theme:
     code: JetBrains Mono
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.instant
     - navigation.footer
     - toc.follow
+    - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
@@ -35,7 +37,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/YOUR_USERNAME/neetcode150-handbook
+      link: https://github.com/YOUR_USERNAME
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -58,7 +60,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Topics:
+  - "Part 1 — NeetCode 150":
     - 1. Arrays & Hashing: 01_arrays_hashing.md
     - 2. Two Pointers: 02_two_pointers.md
     - 3. Sliding Window: 03_sliding_window.md
@@ -77,3 +79,12 @@ nav:
     - 16. Intervals: 16_intervals.md
     - 17. Math & Geometry: 17_math_geometry.md
     - 18. Bit Manipulation: 18_bit_manipulation.md
+  - "Part 2 — Grind 169 Extra":
+    - 19. Arrays Extra: 19_arrays_extra.md
+    - 20. Linked List Extra: 20_linked_list_extra.md
+    - 21. Trees Extra: 21_trees_extra.md
+    - 22. Stack Extra: 22_stack_extra.md
+    - 23. Strings Extra: 23_strings_extra.md
+    - 24. Graphs Extra: 24_graphs_extra.md
+    - 25. Hash Table & Heap Extra: 25_hash_heap_extra.md
+    - 26. Math & DP Extra: 26_math_dp_extra.md
