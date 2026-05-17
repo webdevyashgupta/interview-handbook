@@ -25,7 +25,6 @@ theme:
     - navigation.instant
     - navigation.footer
     - toc.follow
-    - toc.integrate
     - search.suggest
     - search.highlight
     - search.share

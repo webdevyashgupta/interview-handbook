@@ -373,4 +373,4 @@ Return 0 immediately — no bus needed.
 
 ---
 
-*[← Back to Index](./index.md) | [Next: Hash Next: Hash & Heap Extra →](./07_hash_heap_extra.md) Heap Extra →](./25_hash_heap_extra.md)*
+*[← Back to Index](./index.md) | [Next: Hash & Heap Extra →](./25_hash_heap_extra.md)*
