@@ -40,6 +40,18 @@ Output: 5 → 4 → 3 → 2 → 1 → None
 
 Iteratively reverse pointer directions using three pointers: `prev`, `curr`, `next`. At each step, store `next`, flip `curr.next` to `prev`, then advance both pointers.
 
+```mermaid
+graph LR
+    A[1] --> B[2] --> C[3]
+    B -.-> A
+    C -.-> B
+    subgraph "Logic"
+    direction LR
+    curr --> next
+    next -.-> curr
+    end
+```
+
 ### Solution
 
 ```python

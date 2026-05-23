@@ -283,4 +283,4 @@ This is weighted interval scheduling (maximize profit). Unweighted interval sche
 
 ---
 
-*[← Back to Index](./index.md) | [Next: Math Next: Math & DP Extra →](./08_math_dp_extra.md) DP Extra →](./26_math_dp_extra.md)*
+*[← Back to Index](./index.md) | [Next: Math & DP Extra →](./26_math_dp_extra.md)*

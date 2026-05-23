@@ -36,6 +36,20 @@ trie.search("app")     → true
 
 A Trie is a tree where each node represents a character. Each node has up to 26 children (for lowercase letters) and a boolean flag marking if a complete word ends there.
 
+!!! info "Trie Visual"
+    ```mermaid
+    graph TD
+        Root(( )) --> a((a))
+        a --> p1((p))
+        p1 --> p2((p))
+        style p2 fill:#f96
+        Root --> b((b))
+        b --> a2((a))
+        a2 --> d((d))
+        style d fill:#f96
+    ```
+    *Orange nodes mark the end of words (e.g., "app", "bad").*
+
 - `insert`: Walk the trie character by character, creating nodes as needed. Mark the final node as a word end.
 - `search`: Walk and return `True` only if the path exists AND the final node is marked as a word end.
 - `startsWith`: Walk and return `True` if the path exists (don't need word-end marker).

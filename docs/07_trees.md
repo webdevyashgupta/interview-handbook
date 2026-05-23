@@ -15,7 +15,7 @@
 | 49 | [Balanced Binary Tree](#49-balanced-binary-tree) | 🟢 Easy |
 | 50 | [Same Tree](#50-same-tree) | 🟢 Easy |
 | 51 | [Subtree of Another Tree](#51-subtree-of-another-tree) | 🟢 Easy |
-| 52 | [Lowest Common Ancestor of a BST](#52-lowest-common-ancestor-of-a-bst) | 🟡 Medium |
+| 52 | [Lowest Common Ancestor of BST](#52-lowest-common-ancestor-of-bst) | 🟡 Medium |
 | 53 | [Binary Tree Level Order Traversal](#53-binary-tree-level-order-traversal) | 🟡 Medium |
 | 54 | [Binary Tree Right Side View](#54-binary-tree-right-side-view) | 🟡 Medium |
 | 55 | [Count Good Nodes in Binary Tree](#55-count-good-nodes-in-binary-tree) | 🟡 Medium |
@@ -399,15 +399,18 @@ A subtree must include all descendants of the matched node — it can't be a par
 
 ---
 
-## 52. Lowest Common Ancestor of a BST
+## 52. Lowest Common Ancestor of BST
 
 **LeetCode #235 | Difficulty: 🟡 Medium**
 
 ### Problem Statement
 
-Given a BST and two nodes `p` and `q`, find their lowest common ancestor (LCA) — the deepest node that has both `p` and `q` as descendants (a node can be a descendant of itself).
+Given a Binary Search Tree (BST) and two nodes `p` and `q`, find their lowest common ancestor (LCA).
 
-```
+!!! tip "BST Property"
+    In a BST, the LCA is the first node where the values of `p` and `q` "split" (one is in the left subtree, one is in the right).
+
+### Intuition
 Input:  root = [6,2,8,0,4,7,9], p = 2, q = 8
 Output: 6
 

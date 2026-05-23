@@ -419,7 +419,7 @@ Extract the sign, work with `abs(x)`, reapply sign at the end.
 
 ---
 
-*[← Back to Index](./index.md)*
+*[← Back to Index](./index.md) | [Next: Arrays Extra (Grind 169) →](./19_arrays_extra.md)*
 
 ---
 

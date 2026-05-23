@@ -278,6 +278,9 @@ def findAnagrams(s: str, p: str) -> list[int]:
 
     result = []
     matches = 0
+    for i in range(26):
+        if p_count[i] == s_count[i]:
+            matches += 1
 
     for i in range(len(s)):
         # Add right character

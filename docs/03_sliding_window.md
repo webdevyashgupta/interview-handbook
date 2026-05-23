@@ -253,6 +253,9 @@ def checkInclusion(s1: str, s2: str) -> bool:
         count1[ord(c) - ord('a')] += 1
 
     matches = 0  # number of chars with equal frequency in both windows
+    for i in range(26):
+        if count1[i] == count2[i]:
+            matches += 1
 
     for i in range(len(s2)):
         idx = ord(s2[i]) - ord('a')

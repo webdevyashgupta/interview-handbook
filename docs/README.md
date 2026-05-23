@@ -31,6 +31,20 @@ Each problem includes:
 | 17 | [Math & Geometry](./17_math_geometry.md) | 8 |
 | 18 | [Bit Manipulation](./18_bit_manipulation.md) | 7 |
 
+## 📚 Part 2 — Grind 169 Extra
+
+| # | Topic | Problems |
+|---|-------|----------|
+| 19 | [Arrays Extra](./19_arrays_extra.md) | 6 |
+| 20 | [Linked List Extra](./20_linked_list_extra.md) | 6 |
+| 21 | [Trees Extra](./21_trees_extra.md) | 7 |
+| 22 | [Stack Extra](./22_stack_extra.md) | 8 |
+| 23 | [Strings Extra](./23_strings_extra.md) | 6 |
+| 24 | [Graphs Extra](./24_graphs_extra.md) | 5 |
+| 25 | [Hash Table & Heap Extra](./25_hash_heap_extra.md) | 4 |
+| 26 | [Math & DP Extra](./26_math_dp_extra.md) | 3 |
+
+
 ## 🌐 Live Site
 
 View the hosted handbook at: `https://<your-username>.github.io/neetcode150-handbook/`

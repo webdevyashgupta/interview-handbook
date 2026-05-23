@@ -58,6 +58,22 @@
 
 ---
 
+## Complexity Quick-Reference
+
+| Data Structure | Access | Search | Insertion | Deletion | Space |
+|----------------|:------:|:------:|:---------:|:--------:|:-----:|
+| **Array** | O(1) | O(n) | O(n) | O(n) | O(n) |
+| **Stack** | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Queue** | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Singly Linked List** | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Doubly Linked List** | O(n) | O(n) | O(1) | O(1) | O(n) |
+| **Hash Table** | N/A | O(1) | O(1) | O(1) | O(n) |
+| **Binary Search Tree** | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+| **AVL Tree / Red-Black** | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+| **Binary Heap** | N/A | O(n) | O(log n) | O(log n) | O(n) |
+
+---
+
 ## Full Problem List
 
 ### 🟢 Easy
