@@ -58,6 +58,24 @@
 
 ---
 
+## Part 3 — Striver DP (A-Z Series)
+
+*Comprehensive Dynamic Programming guide based on Striver's A-Z series.*
+
+| # | Topic | Key Concepts |
+|---|-------|--------------|
+| 1 | [Introduction](./striver-dp/topics/introduction-to-dp.md) | Memoization vs Tabulation, Space Optimization |
+| 2 | [1D DP](./striver-dp/topics/climbing-stairs.md) | Climbing Stairs, Frog Jump, House Robber |
+| 3 | [DP on Grids](./striver-dp/topics/ninjas-training.md) | 2D/3D DP, Unique Paths, Path Sum, Cherry Pickup |
+| 4 | [Subsequences](./striver-dp/topics/subset-sum-equals-target.md) | Knapsack, Subset Sum, Coin Change, Rod Cutting |
+| 5 | [DP on Strings](./striver-dp/topics/longest-common-subsequence.md) | LCS, Edit Distance, Palindromes, Wildcard Matching |
+| 6 | [DP on Stocks](./striver-dp/topics/best-time-to-buy-and-sell-stock.md) | Buy/Sell variants, Cooldown, Transaction Fee |
+| 7 | [DP on LIS](./striver-dp/topics/longest-increasing-subsequence.md) | LIS, Bitonic Subsequence, String Chain |
+| 8 | [Partition DP](./striver-dp/topics/matrix-chain-multiplication.md) | MCM, Burst Balloons, Palindrome Partitioning |
+| 9 | [DP on Rectangles](./striver-dp/topics/maximum-rectangle-area-with-all-1s.md) | Maximal Rectangle, Square Submatrices |
+
+---
+
 ## Complexity Quick-Reference
 
 | Data Structure | Access | Search | Insertion | Deletion | Space |
