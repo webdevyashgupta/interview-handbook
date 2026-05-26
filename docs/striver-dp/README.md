@@ -3,9 +3,9 @@
 Welcome to the comprehensive guide for Dynamic Programming, based on the popular A-Z DP series by Striver (Take U Forward). This repository contains detailed notes, approach explanations, and optimized solutions for various DP patterns.
 
 ## 🚀 Quick Links
-- [📁 DP Patterns](./patterns/) - Common DP patterns and how to identify them.
-- [📝 DP Templates](./templates/) - Ready-to-use code templates for Recursion, Memoization, and Tabulation.
-- [📋 Cheatsheet](./cheatsheet/) - A quick reference guide for space and time complexities.
+- [📁 DP Patterns](./patterns/dp-patterns.md) - Common DP patterns and how to identify them.
+- [📝 DP Templates](./templates/dp-templates.md) - Ready-to-use code templates for Recursion, Memoization, and Tabulation.
+- [📋 Cheatsheet](./cheatsheet/dp-cheatsheet.md) - A quick reference guide for space and time complexities.
 
 ---
 
