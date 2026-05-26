@@ -97,7 +97,7 @@ To master Dynamic Programming, follow this systematic approach for each problem:
 5.  **Space Optimization**: If the current state only depends on the previous row/states, optimize the space complexity from $O(N^2)$ to $O(N)$ or $O(1)$.
 
 ### Study Sequence Recommendation:
-1D DP $\rightarrow$ Grids $\rightarrow$ Subsequences $\rightarrow$ Strings $\rightarrow$ Stocks $\rightarrow$ LIS $\rightarrow$ Partition DP.
+1D DP → Grids → Subsequences → Strings → Stocks → LIS → Partition DP.
 
 ---
 *Happy Coding!* 💻
