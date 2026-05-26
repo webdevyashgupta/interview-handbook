@@ -90,7 +90,7 @@ Welcome to the comprehensive guide for Dynamic Programming, based on the popular
 
 To master Dynamic Programming, follow this systematic approach for each problem:
 
-1.  **Identify the DP Pattern**: Use the [Patterns](./patterns/) guide to recognize the type of problem.
+1.  **Identify the DP Pattern**: Use the [Patterns](./patterns/dp-patterns.md) guide to recognize the type of problem.
 2.  **Start with Recursion**: Express the problem in terms of indices and try out all possible choices at each index.
 3.  **Memoize (Top-Down)**: Store the results of subproblems in an array/map to avoid redundant calculations.
 4.  **Tabulate (Bottom-Up)**: Convert the recursive logic into an iterative approach using a DP table.

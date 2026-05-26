@@ -116,4 +116,4 @@ This guide categorizes common Dynamic Programming (DP) problems into patterns. M
     - "Count square submatrices."
 - **Example Problems:**
     - [Maximum Rectangle Area with all 1s](../topics/maximum-rectangle-area-with-all-1s.md)
-    - [Count Square Submatrices with all Ones (refer to transcript 57)](../transcripts/57_dp_56_count_square_submatrices_with_all_ones_dp_on_rectangles.txt)
+    - [Count Square Submatrices with all Ones](../topics/count-square-submatrices-with-all-ones.md)
