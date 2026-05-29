@@ -76,6 +76,19 @@
 
 ---
 
+## Part 4 — Linear Data Structures & Optimization
+
+*Foundational and advanced techniques for Arrays, Stacks, Queues, and optimization patterns.*
+
+| # | Topic | Key Concepts |
+|---|-------|--------------|
+| 1 | [Arrays](./linear-ds/topics/arrays-basics-largest-second-largest-duplicates.md) | Dutch National Flag, Kadane's, Pascal's Triangle, 4-Sum |
+| 2 | [Sliding Window & Two Pointers](./linear-ds/topics/sliding-window-introduction.md) | Variable Window, Shrinkability, K-Distinct Characters |
+| 3 | [Stacks & Queues](./linear-ds/topics/introduction-to-stack-and-queue.md) | Monotonic Stack, Next Greater Element, Trapping Rainwater |
+| 4 | [Design](./linear-ds/topics/lru-cache.md) | LRU Cache, LFU Cache implementation |
+
+---
+
 ## Complexity Quick-Reference
 
 | Data Structure | Access | Search | Insertion | Deletion | Space |
