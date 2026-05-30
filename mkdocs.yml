@@ -95,137 +95,137 @@ nav:
     - 25. Hash Table & Heap Extra: 25_hash_heap_extra.md
     - 26. Math & DP Extra: 26_math_dp_extra.md
   - "Part 3 — Striver DP":
-    - Introduction: striver-dp/README.md
-    - Cheatsheet: striver-dp/cheatsheet/dp-cheatsheet.md
-    - Patterns: striver-dp/patterns/dp-patterns.md
-    - Templates: striver-dp/templates/dp-templates.md
-    - 1. Introduction: striver-dp/topics/introduction-to-dp.md
-    - 2. 1D Dynamic Programming:
-      - Climbing Stairs: striver-dp/topics/climbing-stairs.md
-      - Frog Jump: striver-dp/topics/frog-jump.md
-      - Frog Jump with K Distance: striver-dp/topics/frog-jump-with-k-distance.md
-      - Maximum Sum of Non-Adjacent Elements: striver-dp/topics/maximum-sum-of-non-adjacent-elements.md
-      - House Robber 2: striver-dp/topics/house-robber-2.md
-    - 3. 2D/3D DP on Grids:
-      - Ninja's Training: striver-dp/topics/ninjas-training.md
-      - Grid Unique Paths: striver-dp/topics/grid-unique-paths.md
-      - Unique Paths 2: striver-dp/topics/unique-paths-2.md
-      - Minimum Path Sum in Grid: striver-dp/topics/minimum-path-sum-in-grid.md
-      - Triangle DP: striver-dp/topics/triangle-dp.md
-      - Minimum/Maximum Falling Path Sum: striver-dp/topics/minimum-maximum-falling-path-sum.md
-      - Cherry Pickup II: striver-dp/topics/cherry-pickup-ii.md
-    - 4. DP on Subsequences:
-      - Subset Sum Equals Target: striver-dp/topics/subset-sum-equals-target.md
-      - Partition Equal Subset Sum: striver-dp/topics/partition-equal-subset-sum.md
-      - Partition Set with Min Difference: striver-dp/topics/partition-set-into-two-subsets-with-minimum-absolute-sum-difference.md
-      - Count Subsets with Sum K: striver-dp/topics/count-subsets-with-sum-k.md
-      - Count Partitions with Given Difference: striver-dp/topics/count-partitions-with-given-difference.md
-      - 0-1 Knapsack: striver-dp/topics/0-1-knapsack.md
-      - Minimum Coins: striver-dp/topics/minimum-coins.md
-      - Target Sum: striver-dp/topics/target-sum.md
-      - Coin Change 2: striver-dp/topics/coin-change-2.md
-      - Unbounded Knapsack: striver-dp/topics/unbounded-knapsack.md
-      - Rod Cutting Problem: striver-dp/topics/rod-cutting-problem.md
-    - 5. DP on Strings:
-      - Longest Common Subsequence: striver-dp/topics/longest-common-subsequence.md
-      - Print LCS: striver-dp/topics/print-longest-common-subsequence.md
-      - Longest Common Substring: striver-dp/topics/longest-common-substring.md
-      - Longest Palindromic Subsequence: striver-dp/topics/longest-palindromic-subsequence.md
-      - Min Insertions for Palindrome: striver-dp/topics/minimum-insertions-to-make-string-palindrome.md
-      - Min Insertions/Deletions: striver-dp/topics/minimum-insertions-deletions-to-convert-string.md
-      - Shortest Common Supersequence: striver-dp/topics/shortest-common-supersequence.md
-      - Distinct Subsequences: striver-dp/topics/distinct-subsequences.md
-      - Edit Distance: striver-dp/topics/edit-distance.md
-      - Wildcard Matching: striver-dp/topics/wildcard-matching.md
-    - 6. DP on Stocks:
-      - Best Time to Buy and Sell Stock: striver-dp/topics/best-time-to-buy-and-sell-stock.md
-      - Buy and Sell Stock II: striver-dp/topics/buy-and-sell-stock-ii.md
-      - Buy and Sell Stock III: striver-dp/topics/buy-and-sell-stocks-iii.md
-      - Buy and Sell Stock IV: striver-dp/topics/buy-and-sell-stocks-iv.md
-      - Buy and Sell Stock with Cooldown: striver-dp/topics/buy-and-sell-stocks-with-cooldown.md
-      - Buy and Sell Stock with Transaction Fee: striver-dp/topics/buy-and-sell-stocks-with-transaction-fee.md
-    - 7. DP on LIS:
-      - Longest Increasing Subsequence: striver-dp/topics/longest-increasing-subsequence.md
-      - Printing LIS: striver-dp/topics/printing-longest-increasing-subsequence.md
-      - LIS using Binary Search: striver-dp/topics/longest-increasing-subsequence-binary-search.md
-      - Largest Divisible Subset: striver-dp/topics/largest-divisible-subset.md
-      - Longest String Chain: striver-dp/topics/longest-string-chain.md
-      - Longest Bitonic Subsequence: striver-dp/topics/longest-bitonic-subsequence.md
-      - Number of LIS: striver-dp/topics/number-of-longest-increasing-subsequences.md
-    - 8. Partition DP:
-      - Matrix Chain Multiplication: striver-dp/topics/matrix-chain-multiplication.md
-      - Minimum Cost to Cut the Stick: striver-dp/topics/minimum-cost-to-cut-the-stick.md
-      - Burst Balloons: striver-dp/topics/burst-balloons.md
-      - Evaluate Boolean Expression to True: striver-dp/topics/evaluate-boolean-expression-to-true.md
-      - Palindrome Partitioning II: striver-dp/topics/palindrome-partitioning-ii.md
-      - Partition Array for Maximum Sum: striver-dp/topics/partition-array-for-maximum-sum.md
-    - 9. DP on Rectangles:
-      - Maximum Rectangle Area: striver-dp/topics/maximum-rectangle-area-with-all-1s.md
-      - Count Square Submatrices: striver-dp/topics/count-square-submatrices-with-all-ones.md
+    - "Introduction": striver-dp/README.md
+    - "Cheatsheet": striver-dp/cheatsheet/dp-cheatsheet.md
+    - "Patterns": striver-dp/patterns/dp-patterns.md
+    - "Templates": striver-dp/templates/dp-templates.md
+    - "1. Introduction": striver-dp/topics/introduction-to-dp.md
+    - "2. 1D Dynamic Programming":
+      - "Climbing Stairs": striver-dp/topics/climbing-stairs.md
+      - "Frog Jump": striver-dp/topics/frog-jump.md
+      - "Frog Jump with K Distance": striver-dp/topics/frog-jump-with-k-distance.md
+      - "Maximum Sum of Non-Adjacent Elements": striver-dp/topics/maximum-sum-of-non-adjacent-elements.md
+      - "House Robber 2": striver-dp/topics/house-robber-2.md
+    - "3. 2D/3D DP on Grids":
+      - "Ninja's Training": striver-dp/topics/ninjas-training.md
+      - "Grid Unique Paths": striver-dp/topics/grid-unique-paths.md
+      - "Unique Paths 2": striver-dp/topics/unique-paths-2.md
+      - "Minimum Path Sum in Grid": striver-dp/topics/minimum-path-sum-in-grid.md
+      - "Triangle DP": striver-dp/topics/triangle-dp.md
+      - "Minimum/Maximum Falling Path Sum": striver-dp/topics/minimum-maximum-falling-path-sum.md
+      - "Cherry Pickup II": striver-dp/topics/cherry-pickup-ii.md
+    - "4. DP on Subsequences":
+      - "Subset Sum Equals Target": striver-dp/topics/subset-sum-equals-target.md
+      - "Partition Equal Subset Sum": striver-dp/topics/partition-equal-subset-sum.md
+      - "Partition Set with Min Difference": striver-dp/topics/partition-set-into-two-subsets-with-minimum-absolute-sum-difference.md
+      - "Count Subsets with Sum K": striver-dp/topics/count-subsets-with-sum-k.md
+      - "Count Partitions with Given Difference": striver-dp/topics/count-partitions-with-given-difference.md
+      - "0-1 Knapsack": striver-dp/topics/0-1-knapsack.md
+      - "Minimum Coins": striver-dp/topics/minimum-coins.md
+      - "Target Sum": striver-dp/topics/target-sum.md
+      - "Coin Change 2": striver-dp/topics/coin-change-2.md
+      - "Unbounded Knapsack": striver-dp/topics/unbounded-knapsack.md
+      - "Rod Cutting Problem": striver-dp/topics/rod-cutting-problem.md
+    - "5. DP on Strings":
+      - "Longest Common Subsequence": striver-dp/topics/longest-common-subsequence.md
+      - "Print LCS": striver-dp/topics/print-longest-common-subsequence.md
+      - "Longest Common Substring": striver-dp/topics/longest-common-substring.md
+      - "Longest Palindromic Subsequence": striver-dp/topics/longest-palindromic-subsequence.md
+      - "Min Insertions for Palindrome": striver-dp/topics/minimum-insertions-to-make-string-palindrome.md
+      - "Min Insertions/Deletions": striver-dp/topics/minimum-insertions-deletions-to-convert-string.md
+      - "Shortest Common Supersequence": striver-dp/topics/shortest-common-supersequence.md
+      - "Distinct Subsequences": striver-dp/topics/distinct-subsequences.md
+      - "Edit Distance": striver-dp/topics/edit-distance.md
+      - "Wildcard Matching": striver-dp/topics/wildcard-matching.md
+    - "6. DP on Stocks":
+      - "Best Time to Buy and Sell Stock": striver-dp/topics/best-time-to-buy-and-sell-stock.md
+      - "Buy and Sell Stock II": striver-dp/topics/buy-and-sell-stock-ii.md
+      - "Buy and Sell Stock III": striver-dp/topics/buy-and-sell-stocks-iii.md
+      - "Buy and Sell Stock IV": striver-dp/topics/buy-and-sell-stocks-iv.md
+      - "Buy and Sell Stock with Cooldown": striver-dp/topics/buy-and-sell-stocks-with-cooldown.md
+      - "Buy and Sell Stock with Transaction Fee": striver-dp/topics/buy-and-sell-stocks-with-transaction-fee.md
+    - "7. DP on LIS":
+      - "Longest Increasing Subsequence": striver-dp/topics/longest-increasing-subsequence.md
+      - "Printing LIS": striver-dp/topics/printing-longest-increasing-subsequence.md
+      - "LIS using Binary Search": striver-dp/topics/longest-increasing-subsequence-binary-search.md
+      - "Largest Divisible Subset": striver-dp/topics/largest-divisible-subset.md
+      - "Longest String Chain": striver-dp/topics/longest-string-chain.md
+      - "Longest Bitonic Subsequence": striver-dp/topics/longest-bitonic-subsequence.md
+      - "Number of LIS": striver-dp/topics/number-of-longest-increasing-subsequences.md
+    - "8. Partition DP":
+      - "Matrix Chain Multiplication": striver-dp/topics/matrix-chain-multiplication.md
+      - "Minimum Cost to Cut the Stick": striver-dp/topics/minimum-cost-to-cut-the-stick.md
+      - "Burst Balloons": striver-dp/topics/burst-balloons.md
+      - "Evaluate Boolean Expression to True": striver-dp/topics/evaluate-boolean-expression-to-true.md
+      - "Palindrome Partitioning II": striver-dp/topics/palindrome-partitioning-ii.md
+      - "Partition Array for Maximum Sum": striver-dp/topics/partition-array-for-maximum-sum.md
+    - "9. DP on Rectangles":
+      - "Maximum Rectangle Area": striver-dp/topics/maximum-rectangle-area-with-all-1s.md
+      - "Count Square Submatrices": striver-dp/topics/count-square-submatrices-with-all-ones.md
   - "Part 4 — Linear Data Structures":
-    - Introduction: linear-ds/README.md
-    - Cheatsheet: linear-ds/cheatsheet/linear-cheatsheet.md
-    - Patterns: linear-ds/patterns/linear-patterns.md
-    - Templates: linear-ds/templates/linear-templates.md
-    - 1. Arrays:
-      - Basics: Largest, 2nd Largest, Dups: linear-ds/topics/arrays-basics-largest-second-largest-duplicates.md
-      - Rotate, Move Zeros, Union/Intersection: linear-ds/topics/arrays-rotate-move-zeros-union-intersection.md
-      - Missing, Single, Max Consecutive: linear-ds/topics/arrays-missing-single-consecutive.md
-      - Longest Subarray with Sum K: linear-ds/topics/arrays-longest-subarray-sum-k.md
-      - Two Sum Problem: linear-ds/topics/arrays-two-sum.md
-      - Sort Array of 0s, 1s, 2s: linear-ds/topics/sort-an-array-of-0s-1s-2s.md
-      - Majority Element (I): linear-ds/topics/majority-element-i.md
-      - Kadane's Algorithm: linear-ds/topics/kadanes-algorithm.md
-      - Rearrange Array by Sign: linear-ds/topics/rearrange-array-elements-by-sign.md
-      - Best Time to Buy/Sell Stock: linear-ds/topics/best-time-to-buy-and-sell-stock.md
-      - Next Permutation: linear-ds/topics/next-permutation.md
-      - Leaders in an Array: linear-ds/topics/leaders-in-an-array.md
-      - Longest Consecutive Sequence: linear-ds/topics/longest-consecutive-sequence.md
-      - Set Matrix Zeroes: linear-ds/topics/set-matrix-zeroes.md
-      - Rotate Matrix by 90 Degrees: linear-ds/topics/rotate-matrix-image-by-90-degrees.md
-      - Spiral Matrix: linear-ds/topics/spiral-matrix.md
-      - Count Subarray Sum Equals K: linear-ds/topics/count-subarray-sum-equals-k.md
-      - Pascal's Triangle: linear-ds/topics/pascal-triangle.md
-      - Majority Element (II): linear-ds/topics/majority-element-ii.md
-      - 3-Sum Problem: linear-ds/topics/3-sum.md
-      - 4-Sum Problem: linear-ds/topics/4-sum.md
-      - Number of Subarrays with XOR K: linear-ds/topics/number-of-subarrays-with-xor-k.md
-      - Merge Overlapping Intervals: linear-ds/topics/merge-overlapping-intervals.md
-      - Merge Sorted Arrays: linear-ds/topics/merge-sorted-arrays-without-extra-space.md
-      - Missing and Repeating Number: linear-ds/topics/find-the-missing-and-repeating-number.md
-      - Count Inversions: linear-ds/topics/count-inversions.md
-      - Reverse Pairs: linear-ds/topics/reverse-pairs.md
-      - Maximum Product Subarray: linear-ds/topics/maximum-product-subarray.md
-    - 2. Sliding Window & Two Pointers:
-      - Introduction: linear-ds/topics/sliding-window-introduction.md
-      - Max Points from Cards: linear-ds/topics/maximum-points-you-can-obtain-from-cards.md
-      - Longest Substring No Repetition: linear-ds/topics/longest-substring-without-repeating-characters.md
-      - Max Consecutive Ones III: linear-ds/topics/max-consecutive-ones-iii.md
-      - Fruit Into Baskets: linear-ds/topics/fruit-into-baskets.md
-      - Longest Substring K Distinct: linear-ds/topics/longest-substring-with-at-most-k-distinct-characters.md
-      - Substrings with All 3 Characters: linear-ds/topics/number-of-substrings-containing-all-three-characters.md
-      - Repeating Character Replacement: linear-ds/topics/longest-repeating-character-replacement.md
-      - Binary Subarrays with Sum: linear-ds/topics/binary-subarrays-with-sum.md
-      - Count Number of Nice Subarrays: linear-ds/topics/count-number-of-nice-subarrays.md
-      - Subarrays with K Different: linear-ds/topics/subarray-with-k-different-integers.md
-      - Minimum Window Substring: linear-ds/topics/minimum-window-substring.md
-    - 3. Stacks & Queues:
-      - Introduction: linear-ds/topics/introduction-to-stack-and-queue.md
-      - Balanced Parentheses: linear-ds/topics/balanced-parentheses.md
-      - Infix, Prefix, Postfix: linear-ds/topics/prefix-infix-postfix-conversions.md
-      - Min Stack: linear-ds/topics/min-stack-implementation.md
-      - Next Greater Element (I): linear-ds/topics/next-greater-element.md
-      - Next Greater Element (II): linear-ds/topics/next-greater-element-ii.md
-      - Previous Smaller Element: linear-ds/topics/previous-smaller-element.md
-      - Trapping Rainwater: linear-ds/topics/trapping-rainwater.md
-      - Sum of Subarray Minimums: linear-ds/topics/sum-of-subarray-minimums.md
-      - Sum of Subarray Ranges: linear-ds/topics/sum-of-subarray-ranges.md
-      - Asteroid Collisions: linear-ds/topics/asteroid-collisions.md
-      - Largest Rectangle in Histogram: linear-ds/topics/largest-rectangle-in-histogram.md
-      - Maximal Rectangle: linear-ds/topics/maximal-rectangle.md
-      - Remove K Digits: linear-ds/topics/remove-k-digits.md
-      - Stock Span Problem: linear-ds/topics/stock-span-problem.md
-      - Sliding Window Maximum: linear-ds/topics/sliding-window-maximum.md
-      - The Celebrity Problem: linear-ds/topics/the-celebrity-problem.md
-      - LRU Cache: linear-ds/topics/lru-cache.md
-      - LFU Cache: linear-ds/topics/lfu-cache.md
+    - "Introduction": linear-ds/README.md
+    - "Cheatsheet": linear-ds/cheatsheet/linear-cheatsheet.md
+    - "Patterns": linear-ds/patterns/linear-patterns.md
+    - "Templates": linear-ds/templates/linear-templates.md
+    - "1. Arrays":
+      - "Basics: Largest, 2nd Largest, Dups": linear-ds/topics/arrays-basics-largest-second-largest-duplicates.md
+      - "Rotate, Move Zeros, Union/Intersection": linear-ds/topics/arrays-rotate-move-zeros-union-intersection.md
+      - "Missing, Single, Max Consecutive": linear-ds/topics/arrays-missing-single-consecutive.md
+      - "Longest Subarray with Sum K": linear-ds/topics/arrays-longest-subarray-sum-k.md
+      - "Two Sum Problem": linear-ds/topics/arrays-two-sum.md
+      - "Sort Array of 0s, 1s, 2s": linear-ds/topics/sort-an-array-of-0s-1s-2s.md
+      - "Majority Element (I)": linear-ds/topics/majority-element-i.md
+      - "Kadane's Algorithm": linear-ds/topics/kadanes-algorithm.md
+      - "Rearrange Array by Sign": linear-ds/topics/rearrange-array-elements-by-sign.md
+      - "Best Time to Buy/Sell Stock": linear-ds/topics/best-time-to-buy-and-sell-stock.md
+      - "Next Permutation": linear-ds/topics/next-permutation.md
+      - "Leaders in an Array": linear-ds/topics/leaders-in-an-array.md
+      - "Longest Consecutive Sequence": linear-ds/topics/longest-consecutive-sequence.md
+      - "Set Matrix Zeroes": linear-ds/topics/set-matrix-zeroes.md
+      - "Rotate Matrix by 90 Degrees": linear-ds/topics/rotate-matrix-image-by-90-degrees.md
+      - "Spiral Matrix": linear-ds/topics/spiral-matrix.md
+      - "Count Subarray Sum Equals K": linear-ds/topics/count-subarray-sum-equals-k.md
+      - "Pascal's Triangle": linear-ds/topics/pascal-triangle.md
+      - "Majority Element (II)": linear-ds/topics/majority-element-ii.md
+      - "3-Sum Problem": linear-ds/topics/3-sum.md
+      - "4-Sum Problem": linear-ds/topics/4-sum.md
+      - "Number of Subarrays with XOR K": linear-ds/topics/number-of-subarrays-with-xor-k.md
+      - "Merge Overlapping Intervals": linear-ds/topics/merge-overlapping-intervals.md
+      - "Merge Sorted Arrays": linear-ds/topics/merge-sorted-arrays-without-extra-space.md
+      - "Missing and Repeating Number": linear-ds/topics/find-the-missing-and-repeating-number.md
+      - "Count Inversions": linear-ds/topics/count-inversions.md
+      - "Reverse Pairs": linear-ds/topics/reverse-pairs.md
+      - "Maximum Product Subarray": linear-ds/topics/maximum-product-subarray.md
+    - "2. Sliding Window & Two Pointers":
+      - "Introduction": linear-ds/topics/sliding-window-introduction.md
+      - "Max Points from Cards": linear-ds/topics/maximum-points-you-can-obtain-from-cards.md
+      - "Longest Substring No Repetition": linear-ds/topics/longest-substring-without-repeating-characters.md
+      - "Max Consecutive Ones III": linear-ds/topics/max-consecutive-ones-iii.md
+      - "Fruit Into Baskets": linear-ds/topics/fruit-into-baskets.md
+      - "Longest Substring K Distinct": linear-ds/topics/longest-substring-with-at-most-k-distinct-characters.md
+      - "Substrings with All 3 Characters": linear-ds/topics/number-of-substrings-containing-all-three-characters.md
+      - "Repeating Character Replacement": linear-ds/topics/longest-repeating-character-replacement.md
+      - "Binary Subarrays with Sum": linear-ds/topics/binary-subarrays-with-sum.md
+      - "Count Number of Nice Subarrays": linear-ds/topics/count-number-of-nice-subarrays.md
+      - "Subarrays with K Different": linear-ds/topics/subarray-with-k-different-integers.md
+      - "Minimum Window Substring": linear-ds/topics/minimum-window-substring.md
+    - "3. Stacks & Queues":
+      - "Introduction": linear-ds/topics/introduction-to-stack-and-queue.md
+      - "Balanced Parentheses": linear-ds/topics/balanced-parentheses.md
+      - "Infix, Prefix, Postfix": linear-ds/topics/prefix-infix-postfix-conversions.md
+      - "Min Stack": linear-ds/topics/min-stack-implementation.md
+      - "Next Greater Element (I)": linear-ds/topics/next-greater-element.md
+      - "Next Greater Element (II)": linear-ds/topics/next-greater-element-ii.md
+      - "Previous Smaller Element": linear-ds/topics/previous-smaller-element.md
+      - "Trapping Rainwater": linear-ds/topics/trapping-rainwater.md
+      - "Sum of Subarray Minimums": linear-ds/topics/sum-of-subarray-minimums.md
+      - "Sum of Subarray Ranges": linear-ds/topics/sum-of-subarray-ranges.md
+      - "Asteroid Collisions": linear-ds/topics/asteroid-collisions.md
+      - "Largest Rectangle in Histogram": linear-ds/topics/largest-rectangle-in-histogram.md
+      - "Maximal Rectangle": linear-ds/topics/maximal-rectangle.md
+      - "Remove K Digits": linear-ds/topics/remove-k-digits.md
+      - "Stock Span Problem": linear-ds/topics/stock-span-problem.md
+      - "Sliding Window Maximum": linear-ds/topics/sliding-window-maximum.md
+      - "The Celebrity Problem": linear-ds/topics/the-celebrity-problem.md
+      - "LRU Cache": linear-ds/topics/lru-cache.md
+      - "LFU Cache": linear-ds/topics/lfu-cache.md
