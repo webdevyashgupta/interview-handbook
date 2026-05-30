@@ -47,14 +47,14 @@ Each problem includes:
 
 ## 🌐 Live Site
 
-View the hosted handbook at: `https://<your-username>.github.io/neetcode150-handbook/`
+View the hosted handbook at: `https://webdevyashgupta.github.io/interview-handbook/`
 
 ## 🚀 Quick Start
 
 Clone and browse locally:
 ```bash
-git clone https://github.com/<your-username>/neetcode150-handbook.git
-cd neetcode150-handbook
+git clone https://github.com/webdevyashgupta/interview-handbook.git
+cd interview-handbook
 ```
 
 ## 📖 How to Use

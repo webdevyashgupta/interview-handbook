@@ -1,7 +1,7 @@
 site_name: NeetCode 150 + Grind 169 — Complete Interview Handbook
 site_description: ~197 unique problems covering NeetCode 150, Grind 169, Grind 75, and Blind 75. Every problem has intuition, optimal solution, and interview traps.
-site_url: https://YOUR_USERNAME.github.io/interview-handbook/
-repo_url: https://github.com/YOUR_USERNAME/interview-handbook
+site_url: https://webdevyashgupta.github.io/interview-handbook/
+repo_url: https://github.com/webdevyashgupta/interview-handbook
 repo_name: interview-handbook
 edit_uri: edit/main/docs/
 
@@ -36,7 +36,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/YOUR_USERNAME
+      link: https://github.com/webdevyashgupta
 
 markdown_extensions:
   - pymdownx.highlight:
