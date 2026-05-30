@@ -6,7 +6,7 @@ window.MathJax = {
     processEnvironments: true
   },
   options: {
-    ignoreHtmlClass: ".*|",
+    ignoreHtmlClass: ".*",
     processHtmlClass: "arithmatex"
   }
 };
@@ -16,3 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
     MathJax.typesetPromise();
   }
 });
+
+// For instant navigation (navigation.instant)
+if (typeof app !== 'undefined') {
+  app.document$.subscribe(function() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.typesetPromise();
+    }
+  });
+}
