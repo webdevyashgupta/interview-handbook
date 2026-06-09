@@ -228,3 +228,8 @@ nav:
       - "The Celebrity Problem": linear-ds/topics/the-celebrity-problem.md
       - "LRU Cache": linear-ds/topics/lru-cache.md
       - "LFU Cache": linear-ds/topics/lfu-cache.md
+  - "Part 5 — Last-Minute Revision Guide":
+    - "Introduction": last-minute-revision/README.md
+    - "Binary Search on Answer": last-minute-revision/bs-on-answer.md
+    - "Matrix Optimization": last-minute-revision/matrix-optimization.md
+    - "Advanced LL & Graphs": last-minute-revision/linked-list-advanced.md
