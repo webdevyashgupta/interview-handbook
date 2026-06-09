@@ -62,8 +62,26 @@ Welcome to **Part 5: Last-Minute Revision Guide**. This section is curated to he
 - [LCA of BST](../07_trees.md#52-lowest-common-ancestor-of-bst)
 - [Max Path Sum](../07_trees.md#59-binary-tree-maximum-path-sum)
 - [Course Schedule](../11_graphs.md#87-course-schedule)
-- [**Bipartite Graph Check**](./graphs-advanced.md) (New)
+- [**Bipartite Graph Check**](./graphs-advanced.md#1-bipartite-graph-check) (New)
 - [N-Queens](../10_backtracking.md#79-n-queens)
+
+### 8. Striver 79 "Power" Questions (New)
+- [**Maximum XOR of Two Numbers**](./bitwise-trie.md#1-maximum-xor-of-two-numbers-in-an-array)
+- [**Maximum XOR With Element**](./bitwise-trie.md#2-maximum-xor-with-an-element-from-array)
+- [**Repeated String Match**](./string-mastery.md#1-repeated-string-match)
+- [**KMP Algorithm (LPS Array)**](./string-mastery.md#2-kmp-algorithm-lps-array)
+
+---
+
+## ⚡ Striver 79 Super-Hards Recap
+
+For those aiming for 100% sheet coverage, ensure you've revised these **Hard** problems from Part 1-4:
+- [Median of Two Sorted Arrays](../05_binary_search.md#34-median-of-two-sorted-arrays)
+- [Merge K Sorted Lists](../06_linked_list.md#44-merge-k-sorted-lists)
+- [Serialize/Deserialize Binary Tree](../07_trees.md#60-serialize-and-deserialize-binary-tree)
+- [Word Ladder](../11_graphs.md#92-word-ladder)
+- [Burst Balloons](../striver-dp/topics/burst-balloons.md)
+- [Sliding Window Maximum](../linear-ds/topics/sliding-window-maximum.md)
 
 ---
 
