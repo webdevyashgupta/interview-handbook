@@ -98,7 +98,7 @@
 | **Binary Search** | Answer Search, Range Search | [Aggressive Cows](./last-minute-revision/bs-on-answer.md#2-aggressive-cows), [Book Allocation](./last-minute-revision/bs-on-answer.md#3-book-allocation) |
 | **Matrices** | Optimized Search, Median | [Matrix Median](./last-minute-revision/matrix-optimization.md#2-matrix-median), [2D Search II](./last-minute-revision/matrix-optimization.md#1-search-in-a-2d-matrix-ii) |
 | **Linked List** | Pointer Mastery | [Flattening Multilevel List](./last-minute-revision/linked-list-advanced.md#1-flatten-a-multilevel-linked-list) |
-| **Graphs** | Coloring & Properties | [Bipartite Graph Check](./last-minute-revision/linked-list-advanced.md#2-bipartite-graph-check) |
+| **Graphs** | Coloring & Properties | [Bipartite Graph Check](./last-minute-revision/graphs-advanced.md#1-bipartite-graph-check) |
 
 ---
 

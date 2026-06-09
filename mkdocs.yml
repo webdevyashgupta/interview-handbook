@@ -232,4 +232,5 @@ nav:
     - "Introduction": last-minute-revision/README.md
     - "Binary Search on Answer": last-minute-revision/bs-on-answer.md
     - "Matrix Optimization": last-minute-revision/matrix-optimization.md
-    - "Advanced LL & Graphs": last-minute-revision/linked-list-advanced.md
+    - "Advanced Linked List": last-minute-revision/linked-list-advanced.md
+    - "Advanced Graphs": last-minute-revision/graphs-advanced.md
