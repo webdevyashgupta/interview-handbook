@@ -19,6 +19,26 @@ The optimal approach involves traversing the array from **right to left**:
    - Push the `current_element` onto the stack.
 3. Return the result array.
 
+## Implementation
+
+```python
+def nextGreaterElement(nums: list[int]) -> list[int]:
+    n = len(nums)
+    res = [-1] * n
+    stack = [] # Monotonic stack
+    
+    for i in range(n - 1, -1, -1):
+        while stack and stack[-1] <= nums[i]:
+            stack.pop()
+            
+        if stack:
+            res[i] = stack[-1]
+            
+        stack.append(nums[i])
+        
+    return res
+```
+
 ### Complexity
 - **Time Complexity**: **O(N)**. Although there's a nested while loop, each element is pushed and popped from the stack at most once.
 - **Space Complexity**: **O(N)** for the stack in the worst case (array sorted in decreasing order).

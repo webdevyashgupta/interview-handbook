@@ -16,7 +16,8 @@
 
 ## 🔁 Approach
 
-### 1. Optimal Approach (Monotonic Stack)
+## Implementation
+
 ```python
 def removeKdigits(num: str, k: int) -> str:
     stack = []
@@ -27,7 +28,7 @@ def removeKdigits(num: str, k: int) -> str:
             k -= 1
         stack.append(digit)
     
-    # If k > 0, remove from the end (since stack is monotonic increasing)
+    # If k > 0, remove from the end
     while k > 0:
         stack.pop()
         k -= 1

@@ -34,10 +34,49 @@ Fix two pointers `i` and `j`, and search for `-(nums[i] + nums[j])` in a Hash Se
         - Else:
             - Found a triplet! Add `[nums[i], nums[j], nums[k]]` to result.
             - `j++`, `k--`.
-            - While `j < k` and `nums[j] == nums[j-1]`, `j++` (Skip duplicates).
-            - While `j < k` and `nums[k] == nums[k+1]`, `k--` (Skip duplicates).
+            - While `j < k` and nums[k] == nums[k+1], `k--` (Skip duplicates).
 
-## Complexity
+            ## Implementation
+
+            ```python
+            def threeSum(nums):
+            """
+            Finds all unique triplets in the array that sum up to zero.
+            Optimal Approach: Sorting + Two Pointers
+            Time Complexity: O(N^2), Space Complexity: O(1) (ignoring output)
+            """
+            nums.sort()
+            n = len(nums)
+            result = []
+
+            for i in range(n):
+            # Skip duplicate elements for the first pointer
+            if i > 0 and nums[i] == nums[i - 1]:
+            continue
+
+            target = -nums[i]
+            j, k = i + 1, n - 1
+
+            while j < k:
+            current_sum = nums[j] + nums[k]
+            if current_sum == target:
+                result.append([nums[i], nums[j], nums[k]])
+                j += 1
+                k -= 1
+                # Skip duplicate elements for the second and third pointers
+                while j < k and nums[j] == nums[j - 1]:
+                    j += 1
+                while j < k and nums[k] == nums[k + 1]:
+                    k -= 1
+            elif current_sum < target:
+                j += 1
+            else:
+                k -= 1
+
+            return result
+            ```
+
+            ## Complexity
 - **Time Complexity:** $O(N^2)$ (Sorting takes $O(N \log N)$ and nested loops take $O(N^2)$).
 - **Space Complexity:** $O(1)$ or $O(N)$ depending on the sorting algorithm implementation (ignoring the space for the output).
 

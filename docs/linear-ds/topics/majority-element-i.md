@@ -34,6 +34,30 @@ Given an array of $n$ integers, find the element that appears more than $\lfloor
 - **Time Complexity**: $O(N)$ for the first pass + $O(N)$ for the verification pass = $O(2N)$.
 - **Space Complexity**: $O(1)$
 
+## Implementation
+
+```python
+def majorityElement(nums: list[int]) -> int:
+    candidate = None
+    count = 0
+    
+    # Boyer-Moore Voting Algorithm
+    for num in nums:
+        if count == 0:
+            candidate = num
+            count = 1
+        elif num == candidate:
+            count += 1
+        else:
+            count -= 1
+            
+    # Optional verification if not guaranteed to exist
+    # count = sum(1 for num in nums if num == candidate)
+    # return candidate if count > len(nums) // 2 else -1
+    
+    return candidate
+```
+
 ## Complexity
 - **Time**: $O(N)$ - Two linear passes at most.
 - **Space**: $O(1)$ - Only a few variables used.

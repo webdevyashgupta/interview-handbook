@@ -19,6 +19,35 @@ If `arr[i]` is the minimum for $X$ subarrays, its total contribution to the sum 
 4. **Monotonic Stack**: Use a monotonic stack twice (or once with smart logic) to precompute the indices of the Previous Smaller Element (PSE) and Next Smaller Element (NSE).
 5. **Final Sum**: `total = sum(arr[i] * (i - PSE[i]) * (NSE[i] - i)) % mod`.
 
+## Implementation
+
+```python
+def sumSubarrayMins(arr: list[int]) -> int:
+    MOD = 10**9 + 7
+    n = len(arr)
+    # Distance to Previous Smaller Element
+    left = [0] * n
+    # Distance to Next Smaller or Equal Element
+    right = [0] * n
+    
+    stack = []
+    for i in range(n):
+        while stack and arr[stack[-1]] > arr[i]:
+            stack.pop()
+        left[i] = i - stack[-1] if stack else i + 1
+        stack.append(i)
+        
+    stack = []
+    for i in range(n - 1, -1, -1):
+        while stack and arr[stack[-1]] >= arr[i]:
+            stack.pop()
+        right[i] = stack[-1] - i if stack else n - i
+        stack.append(i)
+        
+    ans = sum(a * l * r for a, l, r in zip(arr, left, right))
+    return ans % MOD
+```
+
 ### Complexity
 - **Time Complexity**: $O(N)$ - Precomputing PSE and NSE takes $O(N)$, and the final sum takes $O(N)$.
 - **Space Complexity**: $O(N)$ - To store the PSE, NSE, and the stack.

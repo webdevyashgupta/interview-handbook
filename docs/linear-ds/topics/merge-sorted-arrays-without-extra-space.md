@@ -46,6 +46,40 @@ Based on the Shell Sort algorithm.
 - **Time Complexity:** $O((n+m) \log(n+m))$.
 - **Space Complexity:** $O(1)$.
 
+## Implementation
+
+```python
+import math
+
+def merge(arr1: list[int], n: int, arr2: list[int], m: int) -> None:
+    gap = math.ceil((n + m) / 2)
+    
+    while gap > 0:
+        i = 0
+        j = gap
+        
+        while j < (n + m):
+            # i in arr1, j in arr1
+            if j < n:
+                if arr1[i] > arr1[j]:
+                    arr1[i], arr1[j] = arr1[j], arr1[i]
+            # i in arr1, j in arr2
+            elif i < n and j >= n:
+                if arr1[i] > arr2[j - n]:
+                    arr1[i], arr2[j - n] = arr2[j - n], arr1[i]
+            # i in arr2, j in arr2
+            elif i >= n:
+                if arr2[i - n] > arr2[j - n]:
+                    arr2[i - n], arr2[j - n] = arr2[j - n], arr2[i - n]
+            
+            i += 1
+            j += 1
+            
+        if gap == 1:
+            break
+        gap = math.ceil(gap / 2)
+```
+
 ## Complexity
 - **Time Complexity:** $O((n+m) \log(n+m))$ for the Gap method.
 - **Space Complexity:** $O(1)$.

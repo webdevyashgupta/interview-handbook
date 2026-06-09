@@ -18,6 +18,26 @@ For any element `arr[i]`, we need to look backwards (to the left) to find the fi
     - If the stack is not empty, the top of the stack is the nearest smaller element.
 5. **Push**: Push the current element `arr[i]` onto the stack.
 
+## Implementation
+
+```python
+def prevSmallerElement(arr: list[int]) -> list[int]:
+    n = len(arr)
+    res = [-1] * n
+    stack = [] # Increasing stack
+    
+    for i in range(n):
+        while stack and stack[-1] >= arr[i]:
+            stack.pop()
+            
+        if stack:
+            res[i] = stack[-1]
+            
+        stack.append(arr[i])
+        
+    return res
+```
+
 ### Complexity
 - **Time Complexity**: $O(N)$ - Each element is pushed and popped at most once.
 - **Space Complexity**: $O(N)$ - For the stack and the output array.

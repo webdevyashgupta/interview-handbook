@@ -26,6 +26,30 @@ This problem is a variation of "Count Inversions." Instead of just $\text{nums}[
 - **Time Complexity**: $O(2N \log N)$ (Counting takes $O(N)$ and Merging takes $O(N)$ at each level).
 - **Space Complexity**: $O(N)$ (for the temporary array).
 
+## Implementation
+
+```python
+def reversePairs(nums: list[int]) -> int:
+    def merge_sort(low, high):
+        if low >= high:
+            return 0
+        mid = (low + high) // 2
+        count = merge_sort(low, mid) + merge_sort(mid + 1, high)
+        
+        # Count reverse pairs
+        j = mid + 1
+        for i in range(low, mid + 1):
+            while j <= high and nums[i] > 2 * nums[j]:
+                j += 1
+            count += (j - (mid + 1))
+            
+        # Merge
+        nums[low : high + 1] = sorted(nums[low : high + 1])
+        return count
+        
+    return merge_sort(0, len(nums) - 1)
+```
+
 ## Complexity
 - **Time**: $O(N \log N)$. The counting step is linear at each recursion level because the $j$ pointer only moves forward across all $i$ iterations (two-pointer technique).
 - **Space**: $O(N)$ for the auxiliary array used during merging.

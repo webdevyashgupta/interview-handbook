@@ -42,6 +42,58 @@ A queue supports:
 - Maintain `head` (front) and `tail` (rear) pointers.
 - Push at `tail`, pop from `head`.
 
+### Implementation
+
+```python
+class Stack:
+    """
+    LIFO (Last In, First Out) implementation using a list.
+    """
+    def __init__(self):
+        self.stack = []
+        
+    def push(self, val):
+        self.stack.append(val)
+        
+    def pop(self):
+        if not self.isEmpty():
+            return self.stack.pop()
+        return None
+        
+    def top(self):
+        if not self.isEmpty():
+            return self.stack[-1]
+        return None
+        
+    def isEmpty(self):
+        return len(self.stack) == 0
+
+class Queue:
+    """
+    FIFO (First In, First Out) implementation using a list.
+    Note: For O(1) pops in Python, use collections.deque.
+    """
+    def __init__(self):
+        from collections import deque
+        self.queue = deque()
+        
+    def enqueue(self, val):
+        self.queue.append(val)
+        
+    def dequeue(self):
+        if not self.isEmpty():
+            return self.queue.popleft()
+        return None
+        
+    def front(self):
+        if not self.isEmpty():
+            return self.queue[0]
+        return None
+        
+    def isEmpty(self):
+        return len(self.queue) == 0
+```
+
 ### Complexity
 - **Time Complexity**: All operations (`push`, `pop`, `top`, `front`) are **O(1)**.
 - **Space Complexity**: **O(N)** where N is the number of elements stored.

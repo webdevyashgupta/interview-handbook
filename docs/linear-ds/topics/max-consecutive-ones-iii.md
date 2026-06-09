@@ -40,6 +40,29 @@ The problem can be rephrased as: "Find the longest subarray that contains at mos
 - **Time Complexity**: $O(N)$
 - **Space Complexity**: $O(1)$
 
+## Implementation
+
+```python
+def longestOnes(nums: list[int], k: int) -> int:
+    l = 0
+    zeros = 0
+    max_len = 0
+    
+    for r in range(len(nums)):
+        if nums[r] == 0:
+            zeros += 1
+            
+        if zeros > k:
+            if nums[l] == 0:
+                zeros -= 1
+            l += 1
+            
+        # Window size is maintained or increased
+        max_len = max(max_len, r - l + 1)
+        
+    return max_len
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$ for the optimal sliding window approach.
 - **Space Complexity**: $O(1)$ as we only use a few variables.

@@ -16,6 +16,33 @@ This problem is an extension of the **Largest Rectangle in Histogram** problem. 
 3. Maintain a global `max_area` and update it after processing each row.
 4. Return the `max_area`.
 
+## Implementation
+
+```python
+def maximalRectangle(matrix: list[list[str]]) -> int:
+    if not matrix or not matrix[0]:
+        return 0
+    
+    cols = len(matrix[0])
+    heights = [0] * (cols + 1)
+    max_area = 0
+    
+    for row in matrix:
+        for i in range(cols):
+            heights[i] = heights[i] + 1 if row[i] == '1' else 0
+            
+        # Largest Rectangle in Histogram logic
+        stack = [-1]
+        for i in range(cols + 1):
+            while heights[i] < heights[stack[-1]]:
+                h = heights[stack.pop()]
+                w = i - stack[-1] - 1
+                max_area = max(max_area, h * w)
+            stack.append(i)
+            
+    return max_area
+```
+
 ## Complexity
 - **Time Complexity**: $O(N \times M)$, where $N$ is the number of rows and $M$ is the number of columns. We process each cell once and run a histogram calculation ($O(M)$) for each row.
 - **Space Complexity**: $O(M)$ to store the `heights` array and the stack used in the histogram calculation.

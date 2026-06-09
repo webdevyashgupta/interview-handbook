@@ -83,6 +83,55 @@ def longest_subarray_optimal(arr, k):
     return max_len
 ```
 
+## Implementation
+
+```python
+def longest_subarray_positives_optimal(arr, k):
+    """
+    Optimal for arrays with only positives and zeros.
+    Uses Sliding Window (Two Pointers).
+    """
+    left, right = 0, 0
+    current_sum = arr[0]
+    max_len = 0
+    n = len(arr)
+    
+    while right < n:
+        while left <= right and current_sum > k:
+            current_sum -= arr[left]
+            left += 1
+        if current_sum == k:
+            max_len = max(max_len, right - left + 1)
+        right += 1
+        if right < n:
+            current_sum += arr[right]
+    return max_len
+
+def longest_subarray_negatives_optimal(arr, k):
+    """
+    Optimal for arrays with positives, negatives, and zeros.
+    Uses Prefix Sum + Hashing.
+    """
+    pre_sum_map = {}
+    current_sum = 0
+    max_len = 0
+    
+    for i in range(len(arr)):
+        current_sum += arr[i]
+        
+        if current_sum == k:
+            max_len = max(max_len, i + 1)
+            
+        rem = current_sum - k
+        if rem in pre_sum_map:
+            max_len = max(max_len, i - pre_sum_map[rem])
+            
+        if current_sum not in pre_sum_map:
+            pre_sum_map[current_sum] = i
+            
+    return max_len
+```
+
 ## ⏱️ Complexity
 - **Time**: 
   - Hashing: $O(N)$ (with hash map) or $O(N \log N)$ (with ordered map).

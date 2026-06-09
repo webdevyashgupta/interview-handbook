@@ -19,6 +19,32 @@ When we encounter a closing bracket, it must match the most recently opened brac
      - If it doesn't match, return `false`.
 3. After the loop, if the stack is empty, return `true`. Otherwise, return `false` (some opening brackets were never closed).
 
+### Implementation
+
+```python
+def isValid(s):
+    """
+    Checks if a string of brackets is balanced using a stack.
+    Time Complexity: O(N), Space Complexity: O(N)
+    """
+    stack = []
+    # Mapping of closing to opening brackets
+    mapping = {")": "(", "}": "{", "]": "["}
+    
+    for char in s:
+        if char in mapping:
+            # If it's a closing bracket, it must match the stack's top
+            top_element = stack.pop() if stack else '#'
+            if mapping[char] != top_element:
+                return False
+        else:
+            # If it's an opening bracket, push to stack
+            stack.append(char)
+            
+    # If stack is empty, all brackets were matched
+    return not stack
+```
+
 ### Complexity
 - **Time Complexity**: **O(N)**, where N is the length of the string. We traverse the string once.
 - **Space Complexity**: **O(N)** in the worst case (e.g., all opening brackets).

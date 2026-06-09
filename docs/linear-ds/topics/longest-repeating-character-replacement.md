@@ -37,6 +37,29 @@ The core idea is that for any substring, if we want to turn it into a string of 
 - **Time Complexity:** $O(N)$.
 - **Space Complexity:** $O(26)$.
 
+## Implementation
+
+```python
+def characterReplacement(s: str, k: int) -> int:
+    count = {}
+    max_freq = 0
+    l = 0
+    max_len = 0
+    
+    for r in range(len(s)):
+        count[s[r]] = count.get(s[r], 0) + 1
+        max_freq = max(max_freq, count[s[r]])
+        
+        # If window is invalid, shift it
+        if (r - l + 1) - max_freq > k:
+            count[s[l]] -= 1
+            l += 1
+            
+        max_len = max(max_len, r - l + 1)
+        
+    return max_len
+```
+
 ## Complexity
 - **Time Complexity:** $O(N)$ where $N$ is the length of the string. We traverse the string once with the right pointer.
 - **Space Complexity:** $O(26)$ or $O(1)$ since the hash map size is constant (number of uppercase English letters).

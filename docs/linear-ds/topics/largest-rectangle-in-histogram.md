@@ -27,6 +27,36 @@ The width of the rectangle for a bar at index `i` is `(NSE_index - PSE_index - 1
     - Calculate area: `heights[popped_index] * (current_index - new_top_index - 1)`.
 3. After the loop, if bars remain in the stack, their **NSE** is the length of the array (`N`). Process them using the same logic.
 
+## Implementation
+
+```python
+def largestRectangleArea(heights):
+    """
+    Finds the largest rectangle area in a histogram.
+    Optimal Approach: Monotonic Stack (One-Pass)
+    Time Complexity: O(N), Space Complexity: O(N)
+    """
+    stack = [] # Stores indices
+    max_area = 0
+    n = len(heights)
+    
+    for i in range(n + 1):
+        # Use a dummy height of 0 at the end to clear the stack
+        current_height = heights[i] if i < n else 0
+        
+        while stack and heights[stack[-1]] >= current_height:
+            h = heights[stack.pop()]
+            # If stack is empty, the bar is the smallest seen so far
+            # Width = current index i
+            # If stack is not empty, width = current index - new top - 1
+            w = i if not stack else i - stack[-1] - 1
+            max_area = max(max_area, h * w)
+            
+        stack.append(i)
+        
+    return max_area
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$ because every element is pushed and popped from the stack exactly once.
 - **Space Complexity**: $O(N)$ for the stack.

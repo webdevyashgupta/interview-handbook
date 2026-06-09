@@ -25,6 +25,35 @@ A standard stack doesn't keep track of the minimum element efficiently. To get t
   - Else: Pop `top`.
 - This approach uses mathematical encoding to store the previous minimum within the stack itself when a new minimum is found.
 
+## Implementation
+
+```python
+class MinStack:
+    def __init__(self):
+        self.stack = [] # Stores (value, current_min)
+
+    def push(self, val: int) -> None:
+        if not self.stack:
+            self.stack.append((val, val))
+        else:
+            current_min = self.stack[-1][1]
+            self.stack.append((val, min(val, current_min)))
+
+    def pop(self) -> None:
+        if self.stack:
+            self.stack.pop()
+
+    def top(self) -> int:
+        if self.stack:
+            return self.stack[-1][0]
+        return -1
+
+    def getMin(self) -> int:
+        if self.stack:
+            return self.stack[-1][1]
+        return -1
+```
+
 ### Complexity
 - **Time Complexity**: **O(1)** for all operations (`push`, `pop`, `top`, `getMin`).
 - **Space Complexity**: **O(N)** to store the elements.

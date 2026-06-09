@@ -37,6 +37,27 @@ The observation-based approach realizes that the maximum product must involve ei
         - `ans = max(ans, prefix, suffix)`
     3. Return `ans`.
 
+## Implementation
+
+```python
+def maxProduct(nums: list[int]) -> int:
+    n = len(nums)
+    prefix = 1
+    suffix = 1
+    ans = float('-inf')
+    
+    for i in range(n):
+        if prefix == 0: prefix = 1
+        if suffix == 0: suffix = 1
+        
+        prefix *= nums[i]
+        suffix *= nums[n - i - 1]
+        
+        ans = max(ans, prefix, suffix)
+        
+    return ans
+```
+
 ## Complexity
 - **Time**: $O(N)$ - Single pass (or two passes) through the array.
 - **Space**: $O(1)$ - Only constant extra space for variables.

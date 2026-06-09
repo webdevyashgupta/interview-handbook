@@ -30,6 +30,34 @@ Computers prefer Postfix or Prefix because they remove the need for parentheses 
 - If operand: Push to stack.
 - If operator: Pop two operands, combine them with the operator in the correct order (with parentheses for infix), and push the result back.
 
+## Implementation (Infix to Postfix)
+
+```python
+def infixToPostfix(exp: str) -> str:
+    precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
+    stack = []
+    res = ""
+    
+    for char in exp:
+        if char.isalnum():
+            res += char
+        elif char == '(':
+            stack.append(char)
+        elif char == ')':
+            while stack and stack[-1] != '(':
+                res += stack.pop()
+            stack.pop() # pop '('
+        else:
+            while stack and stack[-1] != '(' and precedence.get(char, 0) <= precedence.get(stack[-1], 0):
+                res += stack.pop()
+            stack.append(char)
+            
+    while stack:
+        res += stack.pop()
+        
+    return res
+```
+
 ### Complexity
 - **Time Complexity**: **O(N)**, where N is the length of the expression.
 - **Space Complexity**: **O(N)** for the stack.

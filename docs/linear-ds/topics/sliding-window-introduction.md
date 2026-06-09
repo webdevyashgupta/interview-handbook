@@ -55,6 +55,30 @@ while R < len(nums):
     R += 1
 ```
 
+## Implementation (Template)
+
+```python
+def sliding_window_template(nums, K):
+    l = 0
+    max_len = 0
+    current_state = 0
+    
+    for r in range(len(nums)):
+        # 1. Expand
+        current_state += nums[r]
+        
+        # 2. Shrink if invalid
+        if current_state > K:
+            current_state -= nums[l]
+            l += 1
+            
+        # 3. Update Answer
+        if current_state <= K:
+            max_len = max(max_len, r - l + 1)
+            
+    return max_len
+```
+
 ## Complexity
 - **Time**: $O(N)$ or $O(2N)$. Even with a nested loop, each pointer `L` and `R` only moves from $0$ to $N$ once.
 - **Space**: $O(1)$ usually, or $O(K)$ if using a hash map to store frequencies.

@@ -36,6 +36,48 @@ A frequency map (or hash array) helps keep track of characters we need from `t`.
             - Increment `L`.
 - **Result:** Return the substring of `s` starting at `startIdx` with length `minLen`. If `startIdx` is still `-1`, return `""`.
 
+## Implementation
+
+```python
+def minWindow(s: str, t: str) -> str:
+    if not t or not s:
+        return ""
+    
+    dict_t = {}
+    for char in t:
+        dict_t[char] = dict_t.get(char, 0) + 1
+        
+    required = len(dict_t)
+    l, r = 0, 0
+    formed = 0
+    window_counts = {}
+    
+    # (window length, left, right)
+    ans = float("inf"), None, None
+    
+    while r < len(s):
+        char = s[r]
+        window_counts[char] = window_counts.get(char, 0) + 1
+        
+        if char in dict_t and window_counts[char] == dict_t[char]:
+            formed += 1
+            
+        while l <= r and formed == required:
+            char = s[l]
+            
+            if r - l + 1 < ans[0]:
+                ans = (r - l + 1, l, r)
+                
+            window_counts[char] -= 1
+            if char in dict_t and window_counts[char] < dict_t[char]:
+                formed -= 1
+                
+            l += 1
+        r += 1
+        
+    return "" if ans[0] == float("inf") else s[ans[1] : ans[2] + 1]
+```
+
 ## Complexity
 - **Time Complexity:** $O(N + M)$, where $N$ is the length of `s` and $M$ is the length of `t`. Each pointer moves at most $N$ times.
 - **Space Complexity:** $O(256)$ or $O(1)$ as we use a fixed-size array/map for character frequencies.

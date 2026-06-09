@@ -14,6 +14,33 @@ A naive approach would be to iterate through every window of size `k` and find t
 3. **Remove Out-of-Bounds Indices**: If the index at the front of the deque is less than `i - k + 1`, it's outside the current window and should be removed.
 4. **Record Result**: Once the first window is fully processed (i.e., `i >= k - 1`), the element at the front of the deque is the maximum for the current window.
 
+## Implementation
+
+```python
+from collections import deque
+
+def maxSlidingWindow(nums: list[int], k: int) -> list[int]:
+    dq = deque() # Stores indices
+    res = []
+    
+    for i in range(len(nums)):
+        # 1. Remove indices out of current window
+        if dq and dq[0] < i - k + 1:
+            dq.popleft()
+            
+        # 2. Maintain monotonic decreasing property
+        while dq and nums[dq[-1]] <= nums[i]:
+            dq.pop()
+            
+        dq.append(i)
+        
+        # 3. Add to result if first window is processed
+        if i >= k - 1:
+            res.append(nums[dq[0]])
+            
+    return res
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$. Each element is pushed and popped from the deque at most once.
 - **Space Complexity**: $O(K)$. The deque stores at most $k$ indices at any time.

@@ -33,6 +33,34 @@ To optimize space to $O(1)$, use two pointers `left` and `right`.
 - **Time Complexity**: $O(N)$
 - **Space Complexity**: $O(1)$
 
+## Implementation
+
+```python
+def trap(height: list[int]) -> int:
+    if not height:
+        return 0
+    
+    l, r = 0, len(height) - 1
+    left_max, right_max = 0, 0
+    res = 0
+    
+    while l < r:
+        if height[l] < height[r]:
+            if height[l] >= left_max:
+                left_max = height[l]
+            else:
+                res += left_max - height[l]
+            l += 1
+        else:
+            if height[r] >= right_max:
+                right_max = height[r]
+            else:
+                res += right_max - height[r]
+            r -= 1
+            
+    return res
+```
+
 ### Complexity
 - **Time Complexity**: $O(N)$ for both optimized approaches.
 - **Space Complexity**: $O(N)$ with auxiliary arrays, $O(1)$ with the two-pointer approach.

@@ -24,6 +24,31 @@ The optimal strategy uses **elimination**. If A knows B, A cannot be the celebri
    - Check if the candidate's column is all 1s (except for the diagonal).
    - If both conditions pass, return the candidate.
 
+## Implementation
+
+```python
+def celebrity(M, n):
+    top = 0
+    down = n - 1
+    
+    # Step 1: Elimination
+    while top < down:
+        if M[top][down] == 1:
+            top += 1
+        else:
+            down -= 1
+            
+    candidate = top
+    
+    # Step 2: Verification
+    for i in range(n):
+        if i != candidate:
+            if M[candidate][i] == 1 or M[i][candidate] == 0:
+                return -1
+                
+    return candidate
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$. We eliminate one person in each step of the two-pointer phase and then perform a single $O(N)$ verification pass.
 - **Space Complexity**: $O(1)$. No extra space is used except for pointers.

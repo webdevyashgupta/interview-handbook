@@ -14,7 +14,8 @@
 
 ## 🔁 Approach
 
-### 1. Optimal Approach (Monotonic Stack)
+## Implementation
+
 ```python
 class StockSpanner:
     def __init__(self):

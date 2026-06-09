@@ -37,6 +37,33 @@ Given an array of integers, find the contiguous subarray (containing at least on
     - Whenever `max_sum` is updated, store the current `start` in `ansStart` and the current index `i` in `ansEnd`.
     - The maximum subarray is `arr[ansStart...ansEnd]`.
 
+## Implementation
+
+```python
+def maxSubArray(nums):
+    """
+    Finds the contiguous subarray with the largest sum.
+    Optimal Approach: Kadane's Algorithm
+    Time Complexity: O(N), Space Complexity: O(1)
+    """
+    # Initialize with a very small number
+    max_sum = -float('inf')
+    current_sum = 0
+    
+    for x in nums:
+        current_sum += x
+        
+        # Update max_sum before resetting current_sum
+        # (This handles cases where all numbers are negative)
+        max_sum = max(max_sum, current_sum)
+        
+        # If sum becomes negative, discard it and start fresh
+        if current_sum < 0:
+            current_sum = 0
+            
+    return max_sum
+```
+
 ## Complexity
 - **Time**: $O(N)$ - A single pass through the array.
 - **Space**: $O(1)$ - Only a few variables to store sums and indices.

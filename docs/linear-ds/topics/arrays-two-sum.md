@@ -63,6 +63,41 @@ def two_sum_optimal(arr, target):
     return "NO"
 ```
 
+## Implementation
+
+```python
+def two_sum_hashing(arr, target):
+    """
+    Optimal for Variety 2 (Finding Indices).
+    Time: O(N), Space: O(N)
+    """
+    mpp = {}
+    for i in range(len(arr)):
+        num = arr[i]
+        complement = target - num
+        if complement in mpp:
+            return [mpp[complement], i]
+        mpp[num] = i
+    return []
+
+def two_sum_optimal_space(arr, target):
+    """
+    Optimal for Variety 1 (Yes/No) if array is sorted.
+    Time: O(N log N) for sorting + O(N) for two pointers, Space: O(1)
+    """
+    arr.sort()
+    left, right = 0, len(arr) - 1
+    while left < right:
+        sum_val = arr[left] + arr[right]
+        if sum_val == target:
+            return "YES"
+        elif sum_val < target:
+            left += 1
+        else:
+            right -= 1
+    return "NO"
+```
+
 ## ⏱️ Complexity
 - **Time**: 
   - Brute Force: $O(N^2)$

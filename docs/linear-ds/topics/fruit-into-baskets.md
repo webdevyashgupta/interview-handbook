@@ -43,6 +43,39 @@ Since we need to find the maximum length of a contiguous segment (subarray) with
 - **Time Complexity**: $O(N)$
 - **Space Complexity**: $O(1)$
 
+## Implementation
+
+```python
+def totalFruit(fruits):
+    """
+    Finds the length of the longest subarray with at most two distinct fruit types.
+    Optimal Approach: Sliding Window (Grow-only version)
+    Time Complexity: O(N), Space Complexity: O(1)
+    """
+    left = 0
+    max_len = 0
+    # Map to store frequency of fruit types in current window
+    count = {}
+    
+    for right in range(len(fruits)):
+        # Add fruit at right pointer
+        count[fruits[right]] = count.get(fruits[right], 0) + 1
+        
+        # If we have more than 2 types, shrink window from left
+        if len(count) > 2:
+            count[fruits[left]] -= 1
+            if count[fruits[left]] == 0:
+                del count[fruits[left]]
+            left += 1
+            
+        # If window is valid, update max_len
+        # (In the grow-only version, we only update if it's currently valid)
+        if len(count) <= 2:
+            max_len = max(max_len, right - left + 1)
+            
+    return max_len
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$ for the optimal sliding window.
 - **Space Complexity**: $O(1)$ since we store at most 3 types in the map.

@@ -60,6 +60,48 @@ def single_number(nums):
     return xorr
 ```
 
+## Implementation
+
+```python
+def missing_number_optimal(arr, n):
+    """
+    Finds the missing number using XOR.
+    Time: O(N), Space: O(1)
+    """
+    xor1 = 0
+    xor2 = 0
+    for i in range(n - 1):
+        xor2 ^= arr[i]
+        xor1 ^= (i + 1)
+    xor1 ^= n
+    return xor1 ^ xor2
+
+def max_consecutive_ones(nums):
+    """
+    Finds maximum consecutive ones in a binary array.
+    Time: O(N), Space: O(1)
+    """
+    maxi = 0
+    cnt = 0
+    for x in nums:
+        if x == 1:
+            cnt += 1
+            maxi = max(maxi, cnt)
+        else:
+            cnt = 0
+    return maxi
+
+def single_number_optimal(nums):
+    """
+    Finds the element that appears only once using XOR.
+    Time: O(N), Space: O(1)
+    """
+    xorr = 0
+    for x in nums:
+        xorr ^= x
+    return xorr
+```
+
 ## ⏱️ Complexity
 - **Time**: All optimal solutions are $O(N)$ (single pass).
 - **Space**: All optimal solutions are $O(1)$ (no extra data structures used).

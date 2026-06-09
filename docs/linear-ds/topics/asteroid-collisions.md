@@ -20,6 +20,34 @@ Collisions only occur when a right-moving asteroid (`+`) is followed by a left-m
         - If the stack is empty or the top is negative (moving left), the current asteroid survives and is pushed onto the stack.
 3. Return the elements in the stack as the final state.
 
+## Implementation
+
+```python
+def asteroidCollision(asteroids):
+    """
+    Simulates asteroid collisions using a stack.
+    Time Complexity: O(N), Space Complexity: O(N)
+    """
+    stack = []
+    for a in asteroids:
+        # Collision only happens if stack top is moving right (positive)
+        # and current asteroid is moving left (negative)
+        while stack and a < 0 < stack[-1]:
+            if stack[-1] < -a:
+                # Top asteroid explodes, current continues
+                stack.pop()
+                continue
+            elif stack[-1] == -a:
+                # Both explode
+                stack.pop()
+            # Current asteroid explodes or both exploded
+            break
+        else:
+            # Current asteroid survives (no collision or stack top moving left)
+            stack.append(a)
+    return stack
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$, where $N$ is the number of asteroids. Each asteroid is pushed and popped at most once.
 - **Space Complexity**: $O(N)$ in the worst case to store all asteroids in the stack.

@@ -39,6 +39,35 @@ Just like the binary subarray problem, finding the *exact* count of subarrays wi
     - Add `(R - L + 1)` to the result (this represents all subarrays ending at `R` with at most `k` odd numbers).
 - Final Result: `countAtMost(nums, k) - countAtMost(nums, k - 1)`.
 
+## Implementation
+
+```python
+def numberOfSubarrays(nums, k):
+    """
+    Counts subarrays with exactly k odd numbers.
+    Optimal Approach: Sliding Window (At Most K - At Most K-1)
+    Time Complexity: O(N), Space Complexity: O(1)
+    """
+    def countAtMost(goal):
+        if goal < 0:
+            return 0
+        l = 0
+        curr_odd_count = 0
+        total_subarrays = 0
+        for r in range(len(nums)):
+            if nums[r] % 2 != 0:
+                curr_odd_count += 1
+            while curr_odd_count > goal:
+                if nums[l] % 2 != 0:
+                    curr_odd_count -= 1
+                l += 1
+            # Number of subarrays ending at r with <= goal odd numbers
+            total_subarrays += (r - l + 1)
+        return total_subarrays
+
+    return countAtMost(k) - countAtMost(k - 1)
+```
+
 ## Complexity
 - **Time Complexity:** $O(N)$. We iterate through the array twice (for `countAtMost(k)` and `countAtMost(k-1)`).
 - **Space Complexity:** $O(1)$. No extra space proportional to input size is used.

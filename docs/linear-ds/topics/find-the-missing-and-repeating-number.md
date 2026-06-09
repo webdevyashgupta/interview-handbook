@@ -52,6 +52,37 @@ Use bitwise XOR to isolate the two numbers.
 - **Time Complexity:** $O(N)$.
 - **Space Complexity:** $O(1)$.
 
+## Implementation
+
+```python
+def findMissingRepeatingNumbers(a):
+    """
+    Finds missing and repeating numbers using mathematical identities.
+    Time Complexity: O(N), Space Complexity: O(1)
+    """
+    n = len(a)
+    # x - y = val1
+    # x^2 - y^2 = val2
+    sn = (n * (n + 1)) // 2
+    s2n = (n * (n + 1) * (2 * n + 1)) // 6
+    
+    s, s2 = 0, 0
+    for i in range(n):
+        s += a[i]
+        s2 += a[i] * a[i]
+        
+    val1 = s - sn    # x - y
+    val2 = s2 - s2n  # x^2 - y^2
+    
+    # x^2 - y^2 = (x-y)(x+y) => x+y = val2 / val1
+    val2 = val2 // val1 # x + y
+    
+    x = (val1 + val2) // 2
+    y = x - val1
+    
+    return [x, y]
+```
+
 ## Complexity
 - **Time Complexity:** $O(N)$ for optimal approaches.
 - **Space Complexity:** $O(1)$ for optimal approaches.

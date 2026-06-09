@@ -27,6 +27,24 @@ To find the longest substring without repeats, we can use a "window" that expand
     6. Update `max_len = max(max_len, current_length)`.
     7. Move the `right` pointer forward.
 
+## Implementation
+
+```python
+def lengthOfLongestSubstring(s: str) -> int:
+    char_map = {}
+    l = 0
+    max_len = 0
+    
+    for r in range(len(s)):
+        if s[r] in char_map and char_map[s[r]] >= l:
+            l = char_map[s[r]] + 1
+            
+        char_map[s[r]] = r
+        max_len = max(max_len, r - l + 1)
+        
+    return max_len
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$, where $N$ is the length of the string. Each pointer (`left` and `right`) travels at most $N$ steps.
 - **Space Complexity**: $O(min(N, 256))$ for the hash map/array used to store the last seen indices.

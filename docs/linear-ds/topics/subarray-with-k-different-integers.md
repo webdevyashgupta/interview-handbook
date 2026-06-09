@@ -35,6 +35,28 @@ Using this, we can apply the formula:
     - Add `(R - L + 1)` to the result (total subarrays ending at `R` with $\le k$ distinct elements).
 - The final result is: `countSubarraysWithAtMost(nums, k) - countSubarraysWithAtMost(nums, k - 1)`.
 
+## Implementation
+
+```python
+def subarraysWithKDistinct(nums: list[int], k: int) -> int:
+    def countAtMost(k):
+        if k == 0: return 0
+        l = 0
+        count = 0
+        freq = {}
+        for r in range(len(nums)):
+            freq[nums[r]] = freq.get(nums[r], 0) + 1
+            while len(freq) > k:
+                freq[nums[l]] -= 1
+                if freq[nums[l]] == 0:
+                    del freq[nums[l]]
+                l += 1
+            count += (r - l + 1)
+        return count
+        
+    return countAtMost(k) - countAtMost(k - 1)
+```
+
 ## Complexity
 - **Time Complexity:** $O(N)$. We make two passes over the array, and each pass is $O(N)$ because the pointers `L` and `R` only move forward.
 - **Space Complexity:** $O(N)$ in the worst case to store the frequency map of distinct elements.

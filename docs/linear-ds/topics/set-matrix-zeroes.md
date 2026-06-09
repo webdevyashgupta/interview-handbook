@@ -39,6 +39,41 @@ Instead of using external arrays, use the first row and first column of the matr
 - **Time Complexity:** $O(2 \times (N \times M))$
 - **Space Complexity:** $O(1)$
 
+## Implementation
+
+```python
+def setZeroes(matrix: list[list[int]]) -> None:
+    n = len(matrix)
+    m = len(matrix[0])
+    col0 = 1
+    
+    # Step 1: Mark rows and columns
+    for i in range(n):
+        for j in range(m):
+            if matrix[i][j] == 0:
+                matrix[i][0] = 0
+                if j != 0:
+                    matrix[0][j] = 0
+                else:
+                    col0 = 0
+                    
+    # Step 2: Fill zeros for (1, 1) to (n-1, m-1)
+    for i in range(1, n):
+        for j in range(1, m):
+            if matrix[i][0] == 0 or matrix[0][j] == 0:
+                matrix[i][j] = 0
+                
+    # Step 3: Handle first row
+    if matrix[0][0] == 0:
+        for j in range(m):
+            matrix[0][j] = 0
+            
+    # Step 4: Handle first column
+    if col0 == 0:
+        for i in range(n):
+            matrix[i][0] = 0
+```
+
 ---
 
 ## Complexity

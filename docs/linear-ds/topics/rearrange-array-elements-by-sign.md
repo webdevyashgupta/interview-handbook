@@ -33,6 +33,26 @@ There are two varieties of this problem:
 - **Time Complexity**: $O(N)$ for separation + $O(N)$ for merging = $O(2N)$.
 - **Space Complexity**: $O(N)$ (to store the separate lists).
 
+## Implementation (Variety 1: Equal Positives and Negatives)
+
+```python
+def rearrangeArray(nums: list[int]) -> list[int]:
+    n = len(nums)
+    ans = [0] * n
+    pos_idx = 0
+    neg_idx = 1
+    
+    for num in nums:
+        if num > 0:
+            ans[pos_idx] = num
+            pos_idx += 2
+        else:
+            ans[neg_idx] = num
+            neg_idx += 2
+            
+    return ans
+```
+
 ## Complexity
 - **Time**: $O(N)$ - Usually one or two linear passes.
 - **Space**: $O(N)$ - Required to store the rearranged elements (since in-place rearrangement with preserved order and $O(1)$ space is complex/not possible for Variety 1).

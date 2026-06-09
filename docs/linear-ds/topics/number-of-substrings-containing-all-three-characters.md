@@ -26,6 +26,22 @@ A substring is valid if it contains 'a', 'b', and 'c'. Instead of counting all v
     5. Return `count`.
 - **Why it works**: If the last 'a' is at index 2, last 'b' at 5, and last 'c' at 4, then the substring from index 2 to 5 is the smallest valid substring ending at 5. Any substring starting at index 0, 1, or 2 and ending at 5 will also be valid. Thus, there are `min(2, 5, 4) + 1 = 3` such substrings.
 
+## Implementation
+
+```python
+def numberOfSubstrings(s: str) -> int:
+    last_seen = {'a': -1, 'b': -1, 'c': -1}
+    count = 0
+    
+    for i, char in enumerate(s):
+        last_seen[char] = i
+        if -1 not in last_seen.values():
+            # Smallest of last seen indices determines the count
+            count += min(last_seen.values()) + 1
+            
+    return count
+```
+
 ## Complexity
 - **Time Complexity**: $O(N)$ as we traverse the string once.
 - **Space Complexity**: $O(1)$ to store the last seen indices of three characters.

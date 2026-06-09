@@ -33,6 +33,32 @@ Sort the intervals and merge them as you iterate.
 - **Time Complexity:** $O(N \log N)$ for sorting + $O(N)$ for the linear scan.
 - **Space Complexity:** $O(N)$ for the result list.
 
+## Implementation
+
+```python
+def merge(intervals: list[list[int]]) -> list[list[int]]:
+    if not intervals:
+        return []
+    
+    # Sort based on start times
+    intervals.sort(key=lambda x: x[0])
+    
+    merged = [intervals[0]]
+    
+    for i in range(1, len(intervals)):
+        current = intervals[i]
+        last_merged = merged[-1]
+        
+        if current[0] <= last_merged[1]:
+            # Overlap, merge by updating end time
+            last_merged[1] = max(last_merged[1], current[1])
+        else:
+            # No overlap, add new interval
+            merged.append(current)
+            
+    return merged
+```
+
 ## Complexity
 - **Time Complexity:** $O(N \log N)$ due to sorting.
 - **Space Complexity:** $O(N)$ for the output list. If we don't count the output space, it is $O(1)$ (or $O(N)$ depending on sorting algorithm implementation).

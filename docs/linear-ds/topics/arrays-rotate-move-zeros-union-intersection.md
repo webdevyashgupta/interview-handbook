@@ -85,6 +85,92 @@ def find_union(arr1, arr2):
     return union
 ```
 
+## Implementation
+
+```python
+def rotate_left_optimal(arr, d):
+    """
+    Rotates array to the left by D places using reversal algorithm.
+    Time: O(N), Space: O(1)
+    """
+    n = len(arr)
+    if n == 0: return
+    d %= n
+    def reverse(l, r):
+        while l < r:
+            arr[l], arr[r] = arr[r], arr[l]
+            l += 1; r -= 1
+    reverse(0, d-1)
+    reverse(d, n-1)
+    reverse(0, n-1)
+
+def move_zeros_optimal(arr):
+    """
+    Moves all zeros to the end while maintaining relative order.
+    Time: O(N), Space: O(1)
+    """
+    n = len(arr)
+    j = -1
+    # Find the first zero
+    for i in range(n):
+        if arr[i] == 0:
+            j = i
+            break
+    if j == -1: return arr
+    
+    # Swap non-zeros with the first available zero
+    for i in range(j + 1, n):
+        if arr[i] != 0:
+            arr[i], arr[j] = arr[j], arr[i]
+            j += 1
+    return arr
+
+def find_union_optimal(arr1, arr2):
+    """
+    Finds union of two sorted arrays using two pointers.
+    Time: O(N1 + N2), Space: O(1) (excluding result)
+    """
+    i, j = 0, 0
+    union = []
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] <= arr2[j]:
+            if not union or union[-1] != arr1[i]:
+                union.append(arr1[i])
+            i += 1
+        else:
+            if not union or union[-1] != arr2[j]:
+                union.append(arr2[j])
+            j += 1
+    while i < len(arr1):
+        if not union or union[-1] != arr1[i]:
+            union.append(arr1[i])
+        i += 1
+    while j < len(arr2):
+        if not union or union[-1] != arr2[j]:
+            union.append(arr2[j])
+        j += 1
+    return union
+
+def find_intersection_optimal(arr1, arr2):
+    """
+    Finds intersection of two sorted arrays using two pointers.
+    Time: O(N1 + N2), Space: O(1) (excluding result)
+    """
+    i, j = 0, 0
+    intersection = []
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] < arr2[j]:
+            i += 1
+        elif arr2[j] < arr1[i]:
+            j += 1
+        else:
+            if not intersection or intersection[-1] != arr1[i]:
+                intersection.append(arr1[i])
+            i += 1
+            j += 1
+    return intersection
+```
+
 ## ⏱️ Complexity
 - **Time**: 
   - Rotation/Move Zeros: $O(N)$

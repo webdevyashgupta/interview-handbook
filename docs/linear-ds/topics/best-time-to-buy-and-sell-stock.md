@@ -27,8 +27,32 @@ To maximize profit, you want to buy at the lowest possible price and sell at the
         - Update `maxProfit = max(maxProfit, cost)`.
         - Update `mini = min(mini, prices[i])`.
     4. Return `maxProfit`.
-- **Time Complexity**: $O(N)$
 - **Space Complexity**: $O(1)$
+
+## Implementation
+
+```python
+def maxProfit(prices):
+    """
+    Finds the maximum profit from buying and selling a stock once.
+    Optimal Approach: Single Pass (Greedy/DP)
+    Time Complexity: O(N), Space Complexity: O(1)
+    """
+    if not prices:
+        return 0
+        
+    mini = prices[0] # Minimum price seen so far
+    max_profit = 0
+    
+    for i in range(1, len(prices)):
+        # Calculate potential profit if we sold today
+        cost = prices[i] - mini
+        max_profit = max(max_profit, cost)
+        # Update minimum price for future sell days
+        mini = min(mini, prices[i])
+        
+    return max_profit
+```
 
 ## Complexity
 - **Time**: $O(N)$ - A single pass through the array.

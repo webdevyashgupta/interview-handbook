@@ -36,6 +36,33 @@ The difficulty with a direct sliding window for an *exact* sum is that zeros do 
     - Add `(R - L + 1)` to the total result at each step.
 - The final result is: `countSubarraysWithSumAtMost(nums, goal) - countSubarraysWithSumAtMost(nums, goal - 1)`.
 
+## Implementation
+
+```python
+def numSubarraysWithSum(nums, goal):
+    """
+    Counts subarrays with sum equal to goal.
+    Optimal Approach: Sliding Window (At Most K - At Most K-1)
+    Time Complexity: O(N), Space Complexity: O(1)
+    """
+    def countAtMost(k):
+        if k < 0:
+            return 0
+        l = 0
+        current_sum = 0
+        count = 0
+        for r in range(len(nums)):
+            current_sum += nums[r]
+            while current_sum > k:
+                current_sum -= nums[l]
+                l += 1
+            # Number of subarrays ending at r with sum <= k
+            count += (r - l + 1)
+        return count
+
+    return countAtMost(goal) - countAtMost(goal - 1)
+```
+
 ## Complexity
 - **Time Complexity:** $O(N)$. We perform two passes over the array, each pass being $O(N)$.
 - **Space Complexity:** $O(1)$. We only use a few variables for pointers and sums.

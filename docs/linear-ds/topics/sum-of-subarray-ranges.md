@@ -30,6 +30,31 @@ This reduces the problem to two sub-problems:
 - Add `(max - min)` to the total sum.
 - This is useful if $N$ is small (up to $10^4$).
 
+## Implementation
+
+```python
+def subArrayRanges(nums: list[int]) -> int:
+    def solve(arr, op):
+        n = len(arr)
+        left = [0] * n
+        right = [0] * n
+        stack = []
+        for i in range(n):
+            while stack and (arr[stack[-1]] < arr[i] if op == "max" else arr[stack[-1]] > arr[i]):
+                stack.pop()
+            left[i] = i - stack[-1] if stack else i + 1
+            stack.append(i)
+        stack = []
+        for i in range(n - 1, -1, -1):
+            while stack and (arr[stack[-1]] <= arr[i] if op == "max" else arr[stack[-1]] >= arr[i]):
+                stack.pop()
+            right[i] = stack[-1] - i if stack else n - i
+            stack.append(i)
+        return sum(a * l * r for a, l, r in zip(arr, left, right))
+
+    return solve(nums, "max") - solve(nums, "min")
+```
+
 ### Complexity
 - **Time Complexity**: $O(N)$ - We perform two $O(N)$ passes (one for min sum, one for max sum).
 - **Space Complexity**: $O(N)$ - To store the monotonic stacks and boundary arrays (PSE, NSE, PGE, NGE).

@@ -45,6 +45,24 @@ Use the prefix XOR property and a hash map to count occurrences of prefix XORs.
 - **Time Complexity:** $O(N)$ if using an unordered map, or $O(N \log N)$ for an ordered map.
 - **Space Complexity:** $O(N)$ to store prefix XOR frequencies.
 
+## Implementation
+
+```python
+def solve(A: list[int], K: int) -> int:
+    xr = 0
+    m = {0: 1} # Stores prefix XOR frequencies
+    count = 0
+    
+    for val in A:
+        xr = xr ^ val
+        x = xr ^ K
+        if x in m:
+            count += m[x]
+        m[xr] = m.get(xr, 0) + 1
+        
+    return count
+```
+
 ## Complexity
 - **Time Complexity:** $O(N)$ (Average case with Hash Map).
 - **Space Complexity:** $O(N)$ for the Hash Map.

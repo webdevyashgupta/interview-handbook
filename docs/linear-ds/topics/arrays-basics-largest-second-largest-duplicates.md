@@ -84,6 +84,54 @@ def remove_duplicates_optimal(arr):
     return i + 1
 ```
 
+## Implementation
+
+```python
+def second_largest_optimal(arr):
+    """
+    Finds the second largest distinct element in one pass.
+    """
+    if len(arr) < 2:
+        return -1
+    
+    largest = arr[0]
+    s_largest = -float('inf')
+    
+    for i in range(1, len(arr)):
+        if arr[i] > largest:
+            s_largest = largest
+            largest = arr[i]
+        elif arr[i] < largest and arr[i] > s_largest:
+            s_largest = arr[i]
+            
+    return s_largest if s_largest != -float('inf') else -1
+
+def remove_duplicates_optimal(arr):
+    """
+    Removes duplicates from a sorted array in-place.
+    Returns the number of unique elements.
+    """
+    if not arr:
+        return 0
+    
+    i = 0 # Slow pointer
+    for j in range(1, len(arr)): # Fast pointer
+        if arr[j] != arr[i]:
+            i += 1
+            arr[i] = arr[j]
+            
+    return i + 1
+
+def check_sorted(arr):
+    """
+    Checks if the array is sorted in non-descending order.
+    """
+    for i in range(1, len(arr)):
+        if arr[i] < arr[i-1]:
+            return False
+    return True
+```
+
 ## ⏱️ Complexity
 - **Time**: 
   - Brute Force: $O(N \log N)$ (due to sorting).

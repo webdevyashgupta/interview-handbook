@@ -16,6 +16,28 @@ The core challenge is the circular nature of the array. A brute force approach w
     - If `i < N`, the top of the stack (if it exists) is the next greater element for `nums[i]`. If the stack is empty, it's -1.
     - Push the current element `nums[i % N]` onto the stack.
 
+## Implementation
+
+```python
+def nextGreaterElements(nums: list[int]) -> list[int]:
+    n = len(nums)
+    res = [-1] * n
+    stack = [] # Decreasing stack
+    
+    # Iterate through the array twice to simulate circularity
+    for i in range(2 * n - 1, -1, -1):
+        while stack and stack[-1] <= nums[i % n]:
+            stack.pop()
+            
+        if i < n:
+            if stack:
+                res[i] = stack[-1]
+                
+        stack.append(nums[i % n])
+        
+    return res
+```
+
 ### Complexity
 - **Time Complexity**: $O(N)$ - We iterate through $2N$ elements, and each element is pushed and popped at most once.
 - **Space Complexity**: $O(N)$ - For the stack and the output array.

@@ -46,7 +46,32 @@ Prefix Sum + Hashing.
 - **Missing Base Case:** Forgetting to initialize the map with `{0: 1}`.
 - **Negative Numbers:** Trying to use a Two-Pointer/Sliding Window approach when the array contains negative numbers (Sliding window typically only works for non-negative integers).
 
-## Related Problems
+## Implementation
+
+```python
+def subarraySum(nums, k):
+    """
+    Counts subarrays whose sum equals k.
+    Optimal Approach: Prefix Sum + Hashing
+    Time Complexity: O(N), Space Complexity: O(N)
+    """
+    # map to store {prefix_sum: frequency}
+    mpp = {0: 1}
+    pre_sum = 0
+    count = 0
+
+    for i in range(len(nums)):
+        pre_sum += nums[i]
+        # Check if (pre_sum - k) exists in map
+        remove = pre_sum - k
+        count += mpp.get(remove, 0)
+        # Update map with current prefix sum
+        mpp[pre_sum] = mpp.get(pre_sum, 0) + 1
+
+    return count
+```
+
+## Complexity
 - Longest Subarray with Sum K
 - Subarray Sums Divisible by K
 - Continuous Subarray Sum

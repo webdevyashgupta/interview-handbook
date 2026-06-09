@@ -42,8 +42,51 @@ Sort the array and use two fixed pointers with two moving pointers.
     5. If `sum == target`, add to result and move both `low` and `high` pointers, skipping duplicates.
     6. If `sum < target`, increment `low`.
     7. If `sum > target`, decrement `high`.
-- **Time Complexity:** $O(N^3)$.
 - **Space Complexity:** $O(1)$ (excluding the space for the result).
+
+## Implementation
+
+```python
+def fourSum(nums, target):
+    """
+    Finds all unique quadruplets that sum up to target.
+    Optimal Approach: Sorting + Two Pointers (Fixed i and j, moving low and high)
+    Time Complexity: O(N^3), Space Complexity: O(1) (ignoring output)
+    """
+    nums.sort()
+    n = len(nums)
+    result = []
+    
+    for i in range(n):
+        # Skip duplicates for i
+        if i > 0 and nums[i] == nums[i-1]:
+            continue
+        for j in range(i + 1, n):
+            # Skip duplicates for j
+            if j > i + 1 and nums[j] == nums[j-1]:
+                continue
+            
+            # Two pointers: low and high
+            low = j + 1
+            high = n - 1
+            while low < high:
+                current_sum = nums[i] + nums[j] + nums[low] + nums[high]
+                if current_sum == target:
+                    result.append([nums[i], nums[j], nums[low], nums[high]])
+                    low += 1
+                    high -= 1
+                    # Skip duplicates for low and high
+                    while low < high and nums[low] == nums[low-1]:
+                        low += 1
+                    while low < high and nums[high] == nums[high+1]:
+                        high -= 1
+                elif current_sum < target:
+                    low += 1
+                else:
+                    high -= 1
+                    
+    return result
+```
 
 ## Complexity
 - **Time Complexity:** $O(N^3)$ for the optimal two-pointer approach.

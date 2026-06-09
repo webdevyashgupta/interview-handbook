@@ -25,6 +25,23 @@ Since we can only pick cards from the ends, we are essentially picking some numb
         - `maxSum = max(maxSum, leftSum + rightSum)`
 - **Alternative Interpretation**: The problem is equivalent to finding a contiguous subarray of size $(N-K)$ with the minimum sum. The cards we *don't* pick must be contiguous in the middle.
 
+## Implementation
+
+```python
+def maxScore(cardPoints: list[int], k: int) -> int:
+    n = len(cardPoints)
+    left_sum = sum(cardPoints[:k])
+    max_sum = left_sum
+    right_sum = 0
+    
+    for i in range(k - 1, -1, -1):
+        left_sum -= cardPoints[i]
+        right_sum += cardPoints[n - (k - i)]
+        max_sum = max(max_sum, left_sum + right_sum)
+        
+    return max_sum
+```
+
 ## Complexity
 - **Time**: $O(K)$ - We first sum $K$ elements, then perform $K$ updates.
 - **Space**: $O(1)$ - Only a few variables to store sums and pointers.

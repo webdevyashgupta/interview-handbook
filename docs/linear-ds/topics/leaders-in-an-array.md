@@ -33,6 +33,33 @@ To be a leader, an element must "beat" every single element on its right. If we 
 
 ---
 
+## Implementation
+
+```python
+def leaders(arr):
+    """
+    Finds all elements that are strictly greater than all elements to their right.
+    Optimal Approach: Scan from Right
+    Time Complexity: O(N), Space Complexity: O(1) (excluding result)
+    """
+    n = len(arr)
+    res = []
+    # Rightmost element is always a leader
+    max_from_right = -float('inf')
+    
+    # Traverse from right to left
+    for i in range(n - 1, -1, -1):
+        if arr[i] > max_from_right:
+            res.append(arr[i])
+            max_from_right = arr[i]
+            
+    # Reverse to maintain original relative order
+    res.reverse()
+    return res
+```
+
+---
+
 ## Complexity
 - **Time Complexity:** $O(N)$. Even with a reversal at the end, it remains linear.
 - **Space Complexity:** $O(1)$ extra space if we don't count the space used to store the result. $O(N)$ if the result list is included.

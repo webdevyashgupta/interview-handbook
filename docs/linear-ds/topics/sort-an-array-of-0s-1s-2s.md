@@ -36,6 +36,24 @@ The goal is to sort the array with minimal time and space. Since we know the arr
 - **Time Complexity**: $O(N)$ (single pass)
 - **Space Complexity**: $O(1)$
 
+## Implementation
+
+```python
+def sortColors(nums: list[int]) -> None:
+    low, mid, high = 0, 0, len(nums) - 1
+    
+    while mid <= high:
+        if nums[mid] == 0:
+            nums[low], nums[mid] = nums[mid], nums[low]
+            low += 1
+            mid += 1
+        elif nums[mid] == 1:
+            mid += 1
+        else: # nums[mid] == 2
+            nums[mid], nums[high] = nums[high], nums[mid]
+            high -= 1
+```
+
 ## Complexity
 - **Time**: $O(N)$ - Only one iteration through the array.
 - **Space**: $O(1)$ - In-place sorting without extra data structures.

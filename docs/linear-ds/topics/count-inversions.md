@@ -26,6 +26,56 @@ The problem asks us to count how many elements to the right of a given element a
 - **Time Complexity**: $O(N \log N)$
 - **Space Complexity**: $O(N)$ (for the temporary array used in merging).
 
+## Implementation
+
+```python
+def numberOfInversions(a, n):
+    """
+    Counts inversions in an array using Merge Sort.
+    Time Complexity: O(N log N), Space Complexity: O(N)
+    """
+    def merge(arr, low, mid, high):
+        temp = []
+        left = low
+        right = mid + 1
+        cnt = 0
+        
+        while left <= mid and right <= high:
+            if arr[left] <= arr[right]:
+                temp.append(arr[left])
+                left += 1
+            else:
+                # Inversion found! 
+                # All elements from 'left' to 'mid' are > arr[right]
+                temp.append(arr[right])
+                cnt += (mid - left + 1)
+                right += 1
+                
+        while left <= mid:
+            temp.append(arr[left])
+            left += 1
+        while right <= high:
+            temp.append(arr[right])
+            right += 1
+            
+        for i in range(low, high + 1):
+            arr[i] = temp[i - low]
+            
+        return cnt
+
+    def merge_sort(arr, low, high):
+        cnt = 0
+        if low >= high:
+            return cnt
+        mid = (low + high) // 2
+        cnt += merge_sort(arr, low, mid)
+        cnt += merge_sort(arr, mid + 1, high)
+        cnt += merge(arr, low, mid, high)
+        return cnt
+
+    return merge_sort(a, 0, n - 1)
+```
+
 ## Complexity
 - **Time**: $O(N \log N)$ due to the Merge Sort structure.
 - **Space**: $O(N)$ for the auxiliary array used during the merge process.

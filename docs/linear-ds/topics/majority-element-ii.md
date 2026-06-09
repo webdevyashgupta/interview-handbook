@@ -29,6 +29,43 @@ Use a Hash Map to store frequencies of all elements. Iterate through the map and
 3.  **Manual Check:** The above step only provides candidates. Since there might not be elements appearing $> n/3$ times, traverse the array again to count actual occurrences of `el1` and `el2`.
 4.  If actual counts $> n/3$, add them to the result list.
 
+## Implementation
+
+```python
+def majorityElement(nums: list[int]) -> list[int]:
+    if not nums:
+        return []
+    
+    candidate1, candidate2 = None, None
+    count1, count2 = 0, 0
+    
+    # Extended Boyer-Moore Voting Algorithm
+    for num in nums:
+        if candidate1 is not None and num == candidate1:
+            count1 += 1
+        elif candidate2 is not None and num == candidate2:
+            count2 += 1
+        elif count1 == 0:
+            candidate1 = num
+            count1 = 1
+        elif count2 == 0:
+            candidate2 = num
+            count2 = 1
+        else:
+            count1 -= 1
+            count2 -= 1
+            
+    # Verification pass
+    res = []
+    n = len(nums)
+    if candidate1 is not None and nums.count(candidate1) > n // 3:
+        res.append(candidate1)
+    if candidate2 is not None and nums.count(candidate2) > n // 3:
+        res.append(candidate2)
+        
+    return res
+```
+
 ## Complexity
 - **Time Complexity:** $O(N) + O(N) = O(N)$ (Two passes).
 - **Space Complexity:** $O(1)$ as we only use a few variables.

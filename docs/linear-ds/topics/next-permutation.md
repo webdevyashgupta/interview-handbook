@@ -35,6 +35,33 @@ next_permutation(nums.begin(), nums.end());
 4. **Swap:** Swap `nums[index]` and `nums[i]`.
 5. **Reverse the Right Half:** Reverse the sub-array starting from `index + 1` to the end. Since the elements to the right of `index` were originally in descending order, reversing them makes that portion the smallest possible (ascending).
 
+## Implementation
+
+```python
+def nextPermutation(nums: list[int]) -> None:
+    n = len(nums)
+    i = n - 2
+    
+    # 1. Find the breakpoint
+    while i >= 0 and nums[i] >= nums[i + 1]:
+        i -= 1
+        
+    if i >= 0:
+        # 2. Find the smallest element greater than nums[i]
+        j = n - 1
+        while nums[j] <= nums[i]:
+            j -= 1
+        # 3. Swap
+        nums[i], nums[j] = nums[j], nums[i]
+        
+    # 4. Reverse the right half
+    l, r = i + 1, n - 1
+    while l < r:
+        nums[l], nums[r] = nums[r], nums[l]
+        l += 1
+        r -= 1
+```
+
 ---
 
 ## Complexity
