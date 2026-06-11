@@ -236,3 +236,8 @@ nav:
     - "Advanced Graphs": last-minute-revision/graphs-advanced.md
     - "Bitwise Trie & XOR": last-minute-revision/bitwise-trie.md
     - "String Mastery": last-minute-revision/string-mastery.md
+  - "Part 6 — Recent Contest Solutions":
+    - "Introduction": contest-archive/README.md
+    - "June 2026": contest-archive/june-2026.md
+    - "May 2026": contest-archive/may-2026.md
+    - "April 2026": contest-archive/april-2026.md

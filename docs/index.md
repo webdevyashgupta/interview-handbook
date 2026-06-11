@@ -102,6 +102,17 @@
 
 ---
 
+## Part 6 — Recent Contest Solutions (2026)
+
+*Detailed analysis and optimal solutions for the latest LeetCode Weekly and Biweekly contests.*
+
+| Session | Key Problems | Key Patterns |
+|---------|--------------|--------------|
+| **June 2026** | [Non-Overlapping Subarrays](./contest-archive/june-2026.md), Covered Indices | Dynamic Programming, Greedy |
+| **May 2026** | [Max Groups](./contest-archive/may-2026.md), [Reverse Ops](./contest-archive/may-2026.md#q4-minimum-reverse-operations) | Binary Search on Answer, BFS + Data Structures |
+
+---
+
 ## Complexity Quick-Reference
 
 | Data Structure | Access | Search | Insertion | Deletion | Space |
