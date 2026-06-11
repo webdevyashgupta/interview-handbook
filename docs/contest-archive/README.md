@@ -26,7 +26,9 @@ Contests in 2026 have shown a shift toward:
 ---
 
 ## 📊 Performance Statistics
-| Month | Hard Problems Covered | Key Pattern |
-|-------|-----------------------|-------------|
-| June  | 2 | WQS Binary Search (Alien's Trick) |
-| May    | 3 | Offline Queries / Greedy MEX |
+| Month | Questions Refined | Hard Problems Covered | Key Pattern |
+|-------|-------------------|-----------------------|-------------|
+| June  | 8                 | 2                     | WQS Binary Search (Alien's Trick) |
+| May   | 28                | 3                     | Offline Queries / Greedy MEX |
+| April | 4                 | 1                     | Bounded Knapsack / Binary Search |
+| **Total** | **40**        | **6**                 | |
